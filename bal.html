@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <title>Bal by Sociokraft</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Sociokraft - Multipurpose Marketing Technology">
+    <meta name="keywords" content="business, creative, mobile app, saas, fintech, finance, software, services, e-commerce, shopping, multipurpose, shop, marketing, seo, portfolio">
+    <meta name="author" content="Huseyin Yagiz Devre">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Theme switcher (color modes) -->
+    <script src="assets/js/theme-switcher.js"></script>
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      [data-bs-theme="dark"] .page-loading {
+        background-color: #0b0f19;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      [data-bs-theme="dark"] .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      [data-bs-theme="dark"] .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            Sociokraft
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+              <h5 class="offcanvas-title">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!--
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page">Landings</a>
+                    <div class="dropdown-menu p-0">
+                      <div class="d-lg-flex">
+                        <div class="mega-dropdown-column d-flex justify-content-center align-items-center rounded-3 rounded-end-0 px-0" style="margin: -1px; background-color: #f3f6ff;">
+                          <img src="assets/img/landings.jpg" alt="Landings">
+                        </div>
+                        <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="index.html" class="dropdown-item">Template Intro Page</a></li>
+                            <li><a href="landing-mobile-app-showcase-v1.html" class="dropdown-item">Mobile App Showcase v.1</a></li>
+                            <li><a href="landing-mobile-app-showcase-v2.html" class="dropdown-item">Mobile App Showcase v.2</a></li>
+                            <li><a href="landing-product.html" class="dropdown-item d-flex align-items-center">Product Landing</a></li>
+                            <li><a href="landing-startup.html" class="dropdown-item d-flex align-items-center">Startup</a></li>
+                            <li><a href="landing-saas-v1.html" class="dropdown-item">SaaS v.1</a></li>
+                            <li><a href="landing-saas-v2.html" class="dropdown-item">SaaS v.2</a></li>
+                            <li><a href="landing-saas-v3.html" class="dropdown-item">SaaS v.3</a></li>
+                            <li><a href="landing-saas-v4.html" class="dropdown-item">SaaS v.4<span class="badge bg-success ms-2">New</span></a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-dropdown-column pt-lg-3 pb-lg-4" style="--si-mega-dropdown-column-width: 16rem;">
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="landing-financial.html" class="dropdown-item">Financial Consulting</a></li>
+                            <li><a href="landing-online-courses.html" class="dropdown-item">Online Courses</a></li>
+                            <li><a href="landing-medical.html" class="dropdown-item">Medical</a></li>
+                            <li><a href="landing-software-dev-agency-v1.html" class="dropdown-item">Software Dev Agency v.1</a></li>
+                            <li><a href="landing-software-dev-agency-v2.html" class="dropdown-item">Software Dev Agency v.2<span class="badge bg-success ms-2">New</span></a></li>
+                            <li><a href="landing-software-dev-agency-v3.html" class="dropdown-item">Software Dev Agency v.3<span class="badge bg-success ms-2">New</span></a></li>
+                            <li><a href="landing-conference.html" class="dropdown-item">Conference</a></li>
+                            <li><a href="landing-digital-agency.html" class="dropdown-item">Digital Agency</a></li>
+                            <li><a href="landing-blog.html" class="dropdown-item">Blog Homepage</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                    <div class="dropdown-menu">
+                      <div class="d-lg-flex pt-lg-3">
+                        <div class="mega-dropdown-column">
+                          <h6 class="px-3 mb-2">About</h6>
+                          <ul class="list-unstyled mb-3">
+                            <li><a href="about-v1.html" class="dropdown-item py-1">About v.1</a></li>
+                            <li><a href="about-v2.html" class="dropdown-item py-1">About v.2</a></li>
+                            <li><a href="about-v3.html" class="dropdown-item py-1">About v.3</a></li>
+                          </ul>
+                          <h6 class="px-3 mb-2">Blog</h6>
+                          <ul class="list-unstyled mb-3">
+                            <li><a href="blog-list-with-sidebar.html" class="dropdown-item py-1">List View with Sidebar</a></li>
+                            <li><a href="blog-grid-with-sidebar.html" class="dropdown-item py-1">Grid View with Sidebar</a></li>
+                            <li><a href="blog-list-no-sidebar.html" class="dropdown-item py-1">List View no Sidebar</a></li>
+                            <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
+                            <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
+                            <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
+                            <li><a href="blog-podcast.html" class="dropdown-item py-1">Podcast</a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-dropdown-column">
+                          <h6 class="px-3 mb-2">Portfolio</h6>
+                          <ul class="list-unstyled mb-3">
+                            <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
+                            <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
+                            <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
+                            <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
+                            <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
+                            <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
+                          </ul>
+                          <h6 class="px-3 mb-2">Services</h6>
+                          <ul class="list-unstyled mb-3">
+                            <li><a href="services-v1.html" class="dropdown-item py-1">Services v.1</a></li>
+                            <li><a href="services-v2.html" class="dropdown-item py-1">Services v.2</a></li>
+                            <li><a href="services-single-v1.html" class="dropdown-item py-1">Service Details v.1</a></li>
+                            <li><a href="services-single-v2.html" class="dropdown-item py-1">Service Details v.2</a></li>
+                          </ul>
+                        </div>
+                        <div class="mega-dropdown-column">
+                          <h6 class="px-3 mb-2">Pricing</h6>
+                          <ul class="list-unstyled mb-3">
+                            <li><a href="pricing.html" class="dropdown-item py-1">Pricing Page</a></li>
+                          </ul>
+                          <h6 class="px-3 mb-2">Contacts</h6>
+                          <ul class="list-unstyled mb-3">
+                            <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
+                            <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
+                            <li><a href="contacts-v3.html" class="dropdown-item py-1">Contacts v.3</a></li>
+                          </ul>
+                          <h6 class="px-3 mb-2">Specialty</h6>
+                          <ul class="list-unstyled">
+                            <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
+                            <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="account-details.html" class="dropdown-item">Account Details</a></li>
+                      <li><a href="account-security.html" class="dropdown-item">Security</a></li>
+                      <li><a href="account-notifications.html" class="dropdown-item">Notifications</a></li>
+                      <li><a href="account-messages.html" class="dropdown-item">Messages</a></li>
+                      <li><a href="account-saved-items.html" class="dropdown-item">Saved Items</a></li>
+                      <li><a href="account-collections.html" class="dropdown-item">My Collections</a></li>
+                      <li><a href="account-payment.html" class="dropdown-item">Payment Details</a></li>
+                      <li><a href="account-signin.html" class="dropdown-item">Sign In</a></li>
+                      <li><a href="account-signup.html" class="dropdown-item">Sign Up</a></li>
+                    </ul>
+                  </li>
+  
+                  -->
+                <li class="nav-item">
+                  <a href="bal.html" class="nav-link">Bal</a>
+                </li>
+                <li class="nav-item">
+                  <a href="hive.html" class="nav-link">Hive</a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pricing.html" class="nav-link">Pricing</a>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-header border-top">
+              <a href="contact.html"
+                class="btn btn-primary w-100" target="_blank" rel="noopener">
+                Contact Us!
+              </a>
+            </div>
+          </div>
+          <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+            <input type="checkbox" class="form-check-input" id="theme-mode" checked>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+            <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="contact.html"
+          class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+          Contact Us!
+        </a>
+        </div>
+      </header>
+
+
+      <!-- Hero -->
+      <section class="overflow-hidden pt-5" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
+        <div class="container pt-3 pt-sm-4 pt-xl-5">
+          <div class="row pt-md-2 pt-lg-5">
+            <div class="col-md-5 d-flex flex-column mt-md-4 pt-5 pb-3 pb-sm-4 py-md-5">
+              <h1 class="display-4 text-center text-md-start mb-4">Welcome to Bal, Rate Earn Repeat</h1>
+              <p class="fs-lg text-center text-md-start pb-2 pb-md-3 mb-4 mb-lg-5">Bal is your shopping companion, designed to enhance your in-store shopping experience. Sign up today to unlock a world of benefits!</p>
+              <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start">
+                <a href="#" class="btn btn-dark btn-lg px-3 py-2 me-sm-3 me-lg-4 mb-3">
+                  <img src="assets/img/market/appstore-light.svg" class="light-mode-img" width="124" alt="App Store">
+                  <img src="assets/img/market/appstore-dark.svg" class="dark-mode-img" width="124" alt="App Store">
+                </a>
+                <a href="#" class="btn btn-dark btn-lg px-3 py-2 mb-3">
+                  <img src="assets/img/market/googleplay-light.svg" class="light-mode-img" width="139" alt="Google Play">
+                  <img src="assets/img/market/googleplay-dark.svg" class="dark-mode-img" width="139" alt="Google Play">
+                </a>
+              </div>
+              <div class="position-relative d-inline-flex align-items-center justify-content-center justify-content-md-start mt-auto pt-3 pt-md-4 pb-xl-2">
+                <a href="#features" class="btn btn-icon btn-light bg-white stretched-link rounded-circle me-3" data-scroll data-scroll-offset="120" aria-label="Scroll for more">
+                  <i class="bx bx-chevron-down"></i>
+                </a>
+                <span class="fs-sm">Discover Now!</span>
+              </div>     
+            </div>
+            <div class="col-md-7 align-self-end">
+              <div class="position-relative overflow-hidden mt-4 pb-3 pt-4 mx-auto me-md-0" style="max-width: 632px;">
+                <div class="ratio ratio-1x1"></div>
+                <img src="assets/img/landing/app-showcase-1/hero-phone-1.png" class="rellax position-absolute top-0 start-0 zindex-2"  data-rellax-speed="1.6" data-disable-parallax-down="md" alt="Phone">
+                <img src="assets/img/landing/app-showcase-1/hero-phone-2.png" class="rellax position-absolute top-0 start-0"  data-rellax-speed="2.8" data-disable-parallax-down="md" alt="Phone">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5 mt-md-2 mt-lg-4">
+        <div class="swiper pt-2 mx-n2" data-swiper-options='{
+            "slidesPerView": 2,
+            "pagination": {
+              "el": ".swiper-pagination",
+              "clickable": true
+            },
+            "breakpoints": {
+              "500": {
+                "slidesPerView": 3,
+                "spaceBetween": 8
+              },
+              "650": {
+                "slidesPerView": 4,
+                "spaceBetween": 8
+              },
+              "900": {
+                "slidesPerView": 5,
+                "spaceBetween": 8
+              },
+              "1100": {
+                "slidesPerView": 6,
+                "spaceBetween": 8
+              }
+            }
+          }'>
+  
+          <!-- Pagination (bullets) -->
+          <div class="swiper-pagination position-relative pt-2 mt-4"></div>
+        </div>
+      </section>
+      <!-- Features -->
+      <section id="features" class="container pt-lg-2 pt-xl-3 pb-3 pb-xl-5 mt-n2 mt-sm-0 mb-2 mb-md-4 mb-lg-5">
+        <div class="row pb-xl-3">
+          <!-- Parallax gfx -->
+          <div class="col-lg-5 d-none d-lg-block">
+            <div class="position-relative" style="max-width: 400px;">
+              <img src="assets/img/landing/app-showcase-1/features/phone.png" alt="Phone">
+              <div class="rellax position-absolute top-0" data-rellax-vertical-scroll-axis="x"
+                data-rellax-horizontal-speed="0.45" data-disable-parallax-down="lg"
+                style="max-width: 400px; right: -3rem;">
+                <img src="assets/img/landing/app-showcase-1/features/card.png" alt="Card">
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Feature list -->
+          <div class="col-lg-7">
+            <h2 class="h1 text-center text-md-start mb-4">Shopping Redefined</h2>
+          <p class="fs-lg text-muted text-center text-md-start mb-4 mb-xl-5">Rate your purchases and earn Bal Points. As you shop, grow your profile and rack up Bal Points. Don't forget to spend them effortlessly at partnered stores!</p>
+          <div class="row row-cols-1 row-cols-sm-2 pt-2 pt-sm-3 pt-xl-2">
+
+              <!-- Item -->
+              <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+                <div class="d-flex align-items-start pe-xl-3">
+                  <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
+                    <img src="assets/img/landing/app-showcase-1/features/payments.svg" alt="Icon">
+                  </div>
+                  <div class="ps-4 ps-sm-3 ps-md-4">
+                    <h3 class="h5 pb-1 mb-2">Fast Pay!</h3>
+                    <p class="mb-0">Fast Pay is the lightning-fast way to settle your shopping experience, earn and spend Bal Points effortlessly!</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+                <div class="d-flex align-items-start ps-xl-3">
+                  <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
+                    <img src="assets/img/landing/app-showcase-1/features/security.svg" alt="Icon">
+                  </div>
+                  <div class="ps-4 ps-sm-3 ps-md-4">
+                    <h3 class="h5 pb-1 mb-2">Data Security</h3>
+                    <p class="mb-0">Your Security, Our Priority. Bal employs state-of-the-art data encryption measures to safeguard your personal information.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+                <div class="d-flex align-items-start pe-xl-3">
+                  <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
+                    <img src="assets/img/landing/app-showcase-1/features/statistics.svg" alt="Icon">
+                  </div>
+                  <div class="ps-4 ps-sm-3 ps-md-4">
+                    <h3 class="h5 pb-1 mb-2">Partnered Deals</h3>
+                    <p class="mb-0">Unlock exclusive savings! Bal's Partnered Deals bring you unbeatable discounts and special offers from our trusted partner stores.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+                <div class="d-flex align-items-start ps-xl-3">
+                  <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
+                    <img src="assets/img/landing/app-showcase-1/features/support.svg" alt="Icon">
+                  </div>
+                  <div class="ps-4 ps-sm-3 ps-md-4">
+                    <h3 class="h5 pb-1 mb-2">Live Support</h3>
+                    <p class="mb-0">Need assistance anytime, anywhere? Bal offers 24/7 Support to address your queries and concerns around the clock.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+                <div class="d-flex align-items-start pe-xl-3">
+                  <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
+                    <img src="assets/img/landing/app-showcase-1/features/cashback.svg" alt="Icon">
+                  </div>
+                  <div class="ps-4 ps-sm-3 ps-md-4">
+                    <h3 class="h5 pb-1 mb-2">Earn Revards</h3>
+                    <p class="mb-0">Discover exciting promotions! Bal regularly features promotions and special offers to enhance your shopping experience.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item -->
+              <div class="col pb-2 pb-xl-0 mb-4 mb-xl-5">
+                <div class="d-flex align-items-start ps-xl-3">
+                  <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
+                    <img src="assets/img/landing/app-showcase-1/features/happy.svg" alt="Icon">
+                  </div>
+                  <div class="ps-4 ps-sm-3 ps-md-4">
+                    <h3 class="h5 pb-1 mb-2">Customer Satisfaction</h3>
+                    <p class="mb-0">Elevating Your Experience: At Bal, we're committed to going the extra mile to ensure you have a delightful shopping journey.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- How it works (Slider) -->
+      <section id="overview" class="position-relative zindex-2 py-sm-1">
+        <div class="container pb-1 pt-sm-0 py-md-1">
+          <div class="text-center pb-4 mb-3 mx-auto" style="max-width: 530px;">
+            <h2 class="h1">Discover the Bal Shopping Experience</h2>
+            <p class="mb-0">Unlocking the Future of In-Store Shopping - Your Step-by-Step Guide to Effortless Purchases, Rewards, and Exclusive Deals with Bal</p>
+          </div>
+          <div class="row align-items-center justify-content-center py-5 my-sm-2 my-xxl-3">
+            <div class="col-10 col-sm-9 col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
+              <!-- Swiper tabs -->
+              <div class="swiper-tabs zindex-2 mx-auto">
+                <div id="screen-1" class="swiper-tab rounded-3 px-4 px-sm-5 px-md-0 active" style="background: linear-gradient(0deg, #5A28E1 0%, #E24D9A 100%);">
+                  <span class="position-absolute start-0 translate-middle-x zindex-1 rounded-circle" style="bottom: 26.6%; width: 25px; height: 25px; background: linear-gradient(90deg, #96FBC4 0%, #F9F586 100%);"></span>
+                  <span class="position-absolute top-50 translate-middle-y zindex-1 rounded-circle" style="left: -18.5%; width: 14px; height: 14px; background: linear-gradient(90deg, #96FBC4 0%, #F9F586 100%);"></span>
+                  <span class="position-absolute zindex-1 rounded-circle" style="top: 10%; right: -10%; width: 11px; height: 11px; background: linear-gradient(90deg, #96FBC4 0%, #F9F586 100%);"></span>
+                  <img src="assets/img/landing/app-showcase-3/steps/08.png" class="d-block mx-auto" width="500" alt="App screen">
+                </div>
+                <div id="screen-2" class="swiper-tab rounded-3 px-4 px-sm-5 px-md-0" style="background: linear-gradient(120deg, #5A28E1 0%, #E24D9A 100%);">
+                  <span class="position-absolute start-0 translate-middle-x zindex-1 rounded-circle" style="bottom: 38.8%; width: 25px; height: 25px; background: linear-gradient(124deg, #F6D365 2.46%, #FDA085 101.25%);"></span>
+                  <span class="position-absolute zindex-1 rounded-circle" style="bottom: 22.5%; left: -14%; width: 14px; height: 14px; background: linear-gradient(124deg, #F6D365 2.46%, #FDA085 101.25%);"></span>
+                  <span class="position-absolute zindex-1 rounded-circle" style="top: 14%; right: -9%; width: 11px; height: 11px; background: linear-gradient(124deg, #F6D365 2.46%, #FDA085 101.25%);"></span>
+                  <img src="assets/img/landing/app-showcase-3/steps/06.png" class="d-block mx-auto" width="500" alt="App screen">
+                </div>
+                <div id="screen-3" class="swiper-tab rounded-3 px-4 px-sm-5 px-md-0" style="background: linear-gradient(240deg, #5A28E1 0%, #E24D9A 100%);">
+                  <span class="position-absolute start-0 translate-middle-x zindex-1 rounded-circle bg-gradient-primary" style="bottom: 28%; width: 25px; height: 25px;"></span>
+                  <span class="position-absolute top-50 translate-middle-y zindex-1 rounded-circle bg-gradient-primary mt-4" style="left: -16%; width: 14px; height: 14px;"></span>
+                  <span class="position-absolute zindex-1 rounded-circle bg-gradient-primary" style="top: 8.5%; right: -8.5%; width: 11px; height: 11px;"></span>
+                  <img src="assets/img/landing/app-showcase-3/steps/07.png" class="d-block mx-auto" width="500" alt="App screen">
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-5 offset-lg-1">
+              <div class="ps-md-4 ps-lg-0">
+
+                <!-- Swiper slider -->
+                <div class="swiper text-center text-md-start mt-auto" data-swiper-options='{
+                  "spaceBetween": 30,
+                  "loop": true,
+                  "tabs": true,
+                  "pagination": {
+                    "el": "#stepsPagination",
+                    "type": "fraction"
+                  },
+                  "navigation": {
+                    "prevEl": "#prev-screen",
+                    "nextEl": "#next-screen"
+                  }
+                }'>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide" data-swiper-tab="#screen-1">
+                      <div class="h5 text-primary pb-1 mb-2">Step 1</div>
+                      <h2 class="h1 pb-1">Create account</h2>
+                      <ul class="list-unstyled d-table mx-auto mx-md-0">
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          Enter your email and create a password
+                        </li>
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          Check your inbox to find the confirmation email
+                        </li>
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          Complete the rest of your profile to earn points
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide" data-swiper-tab="#screen-2">
+                      <div class="h5 text-primary pb-1 mb-2">Step 2</div>
+                      <h2 class="h1 pb-1">Share Insights</h2>
+                      <ul class="list-unstyled d-table mx-auto mx-md-0">
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          Share your insights on products you bought
+                        </li>
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          Review and answer question about brands and products
+                        </li>
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          Complete more insights and get rewards and discount coupons
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide" data-swiper-tab="#screen-3">
+                      <div class="h5 text-primary pb-1 mb-2">Step 3</div>
+                      <h2 class="h1 pb-1">Enjoy Partnered Deals</h2>
+                      <ul class="list-unstyled d-table mx-auto mx-md-0">
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          Use your points in our partnered stores
+                        </li>
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          Access exclusive discounts, promotions, and offers at partnered stores
+                        </li>
+                        <li class="d-flex fs-lg text-start pb-1 mb-2">
+                          <i class="bx bx-check text-primary lead pe-1 me-1" style="margin-top: .125rem;"></i>
+                          The more you engage, the more you earn and save
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Slider controls (Prev / next) + pagination -->
+                <div class="d-flex justify-content-center justify-content-md-start pt-2 pt-lg-3">
+                  <button type="button" id="prev-screen" class="btn btn-prev btn-icon btn-sm" aria-label="Previous">
+                    <i class="bx bx-chevron-left"></i>
+                  </button>
+                  <div id="stepsPagination" class="swiper-pagination position-relative bottom-0 fs-sm lh-1 fw-medium mx-3" style="width: 1.5rem;"></div>
+                  <button type="button" id="next-screen" class="btn btn-next btn-icon btn-sm" aria-label="Next">
+                    <i class="bx bx-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Fetures -->
+      <section class="container pt-5 pb-2 pb-md-3 py-lg-5">
+        <div class="row align-items-center my-3 py-md-3 py-lg-5">
+          <div class="col-md-6 col-xl-6 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
+            <div class="parallax mx-auto" style="max-width: 800px;">
+              <div class="parallax-layer" data-depth="0.1">
+                <img src="assets/img/landing/app-showcase-3/hero/layer13.png" alt="Bubble">
+              </div>
+              <div class="parallax-layer" data-depth="0.2">
+                <img src="assets/img/landing/app-showcase-3/hero/layer14.png" alt="Screen">
+              </div>
+              <div class="parallax-layer" data-depth="-0.2">
+                <img src="assets/img/landing/app-showcase-3/hero/layer15.png" alt="Screen">
+              </div>
+              <div class="parallax-layer" data-depth="-0.2">
+                <img src="assets/img/landing/app-showcase-3/hero/layer07.png" alt="Bubble">
+              </div>
+              <div class="parallax-layer" data-depth="-0.3">
+                <img src="assets/img/landing/app-showcase-3/hero/layer08.png" alt="Bubble">
+              </div>
+              <div class="parallax-layer" data-depth="-0.3">
+                <img src="assets/img/landing/app-showcase-3/hero/layer09.png" alt="Bubble">
+              </div>
+              <div class="parallax-layer" data-depth="-0.4">
+                <img src="assets/img/landing/app-showcase-3/hero/layer10.png" alt="Screen">
+              </div>
+              <div class="parallax-layer" data-depth="0.4">
+                <img src="assets/img/landing/app-showcase-3/hero/layer11.png" alt="Screen">
+              </div>
+              <div class="parallax-layer" data-depth="0.2">
+                <img src="assets/img/landing/app-showcase-3/hero/layer12.png" alt="Screen">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-5 col-xl-3 offset-xl-1 order-md-1 pb-md-4">
+            <h2 class="pb-3">Make your shooping simple and rewarding</h2>
+            <ul class="list-unstyled pb-3 mb-3">
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
+                Save time and money by using promotions
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
+                Manage payments and expanses online
+              </li>
+              <li class="d-flex align-items-center mb-2">
+                <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
+                Earn your rewards and spent them effortlessly
+              </li>
+            </ul>
+            <a href="#" class="btn btn-primary">
+              Learn more
+              <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Info links -->
+      <section class="container pt-5 pb-4 pb-sm-5 mb-2 mb-sm-0 mb-lg-3 mb-xl-4 mt-md-2 mt-lg-4 mt-xl-5">
+        <div class="row row-cols-1 row-cols-sm-3 pt-sm-3 py-2">
+          <div class="col d-flex d-sm-block d-lg-flex align-items-start mb-3 mb-sm-0">
+            <div class="d-table bg-primary shadow-primary rounded flex-shrink-0 p-2 mb-3">
+              <img src="assets/img/landing/app-showcase-2/icons/chat.svg" width="24" class="d-block m-1" alt="Icon">
+            </div>
+            <div class="ps-4 ps-sm-0 ps-lg-4 ms-lg-2 me-xl-2 pe-xl-5">
+              <h3 class="h4 mb-2 mb-md-3">24/7 Live Support</h3>
+              <p class="mb-1 mb-md-2">Questions? Connect to live customer support!</p>
+              <a href="#" class="btn btn-link px-0">
+                Talk to us
+                <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex d-sm-block d-lg-flex align-items-start mb-3 mb-sm-0">
+            <div class="d-table bg-primary shadow-primary rounded flex-shrink-0 p-2 mb-3">
+              <img src="assets/img/landing/app-showcase-2/icons/faq.svg" width="24" class="d-block m-1" alt="Icon">
+            </div>
+            <div class="ps-4 ps-sm-0 ps-lg-4 ms-lg-2 pe-xl-5">
+              <h3 class="h4 mb-2 mb-md-3">FAQ</h3>
+              <p class="mb-1 mb-md-2">Check out the frequently asked questions!</p>
+              <a href="#" class="btn btn-link px-0">
+                Learn more
+                <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex d-sm-block d-lg-flex align-items-start">
+            <div class="d-table bg-primary shadow-primary rounded flex-shrink-0 p-2 mb-3">
+              <img src="assets/img/landing/app-showcase-2/icons/email.svg" width="24" class="d-block m-1" alt="Icon">
+            </div>
+            <div class="ps-4 ps-sm-0 ps-lg-4 ms-lg-2 pe-xl-5">
+              <h3 class="h4 mb-2 mb-md-3">Email</h3>
+              <p class="mb-1 mb-md-2">Still have a question, shoot us an email now!</p>
+              <a href="#" class="btn btn-link px-0">
+                Drop us an email
+                <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="FAQ" class="container py-5 mb-lg-2">
+        <div class="row py-2 py-md-4 py-lg-5">
+          <div class="col-xl-4 col-md-5 text-center text-md-start pt-md-2 pb-2 pb-md-0 mb-4 mb-md-0">
+            <h2 class="pb-3 mb-1 mb-lg-3">Any questions? <br class="d-none d-md-inline">Check out the FAQs</h2>
+            <p class="fs-lg pb-3 mb-2 mb-lg-3">Still have unanswered questions and need to get in touch?</p>
+            <div class="row row-cols-1 row-cols-sm-2 g-3 g-sm-4">
+              <div class="col">
+                <div class="card card-hover">
+                  <div class="card-body pb-3">
+                    <i class="bx bxs-phone-call d-block fs-2 text-primary mb-2 py-1"></i>
+                    <p class="fs-sm mb-2">Still have  questions?</p>
+                    <a href="#" class="btn btn-link stretched-link px-0">
+                      Call us
+                      <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card card-hover">
+                  <div class="card-body pb-3">
+                    <i class="bx bx-message-rounded-dots d-block fs-2 text-success mb-2 py-1"></i>
+                    <p class="fs-sm mb-2">Still have  questions?</p>
+                    <a href="#" class="btn btn-link text-success stretched-link px-0">
+                      Chat with us
+                      <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-7 offset-xl-1">
+            <div class="accordion" id="faq">
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q1-heading">
+                  <button class="accordion-button shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                    What is Bal, and how does it work?
+                  </button>
+                </h2>
+                <div id="q1" class="accordion-collapse collapse show" aria-labelledby="q1-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Bal is your ultimate shopping companion app that redefines your in-store shopping experience. It allows you to scan your receipts using the app, saving your purchased items to your profile. You can participate in surveys, earn Bal Points, and unlock exclusive discounts.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q2-heading">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                    How do I sign up for Bal, and what information do you need?
+                  </button>
+                </h2>
+                <div id="q2" class="accordion-collapse collapse" aria-labelledby="q2-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Signing up for Bal is a breeze! During the registration process, we'll ask for your phone number, name, and email address (optional). We value your privacy and ensure the security of your data.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q3-heading">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                    Is my personal data safe with Bal?
+                  </button>
+                </h2>
+                <div id="q3" class="accordion-collapse collapse" aria-labelledby="q3-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    Yes, your privacy is paramount to us. Bal employs robust data encryption and protection measures to safeguard your personal information. You can review our comprehensive privacy policy for more details.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q4-heading">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                    Can I use Bal at any store, or is it limited to specific retailers?
+                  </button>
+                </h2>
+                <div id="q4" class="accordion-collapse collapse" aria-labelledby="q4-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Currently, Bal is compatible with select partnered stores, which include major supermarkets and retailers. Check the app for a list of participating locations.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+                <h2 class="accordion-header" id="q5-heading">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                    How do I scan my receipts, and what happens after I scan them?
+                  </button>
+                </h2>
+                <div id="q5" class="accordion-collapse collapse" aria-labelledby="q5-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Scanning your receipts is effortless. Use the Bal app's built-in scanner to capture the QR code on your receipt. Once scanned, your purchased items are instantly stored in your Bal profile for your convenience.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 rounded-3 shadow-sm">
+                <h2 class="accordion-header" id="q6-heading">
+                  <button class="accordion-button shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q6" aria-expanded="false" aria-controls="q6">
+                    What are Bal Points, and how can I earn them?
+                  </button>
+                </h2>
+                <div id="q6" class="accordion-collapse collapse" aria-labelledby="q6-heading" data-bs-parent="#faq">
+                  <div class="accordion-body fs-sm pt-0">
+                    <p>Bal Points are rewards you earn by participating in surveys, engaging with the app, and making purchases at partnered stores. The more you interact with Bal, the more Points you accumulate, which can be redeemed for exclusive discount coupons.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscription CTA -->
+      <section id="contact_now" class="container">
+        <div class="position-relative bg-dark rounded-3 overflow-hidden py-5 px-4 px-sm-0">
+          <span class="position-absolute top-0 start-0 d-block w-100 h-100" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);"></span>
+          <div class="position-relative row justify-content-center py-sm-2 py-lg-5">
+            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
+              <h2 class="h1 text-light mb-4">Ready to Get Started?</h2>
+              <p class="fs-lg text-light opacity-70 pb-4 mb-3">Write your email address so we can contact you</p>
+
+              <!-- Desktop form -->
+              <form class="input-group input-group-lg d-none d-sm-flex subscription-form validate mb-3" action="https://sociokraft.us12.list-manage.com/subscribe/post?u=80a707b9b9b7b3a594a5eb5b0&amp;id=0759912701&amp;f_id=0066bce0f0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                <div class="input-group">
+                  <input type="email" id="subscr-email" class="form-control rounded-start ps-5" name="EMAIL" placeholder="Your email" required>
+                  <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+
+                  <button type="submit" class="btn btn-primary" name="subscribe">Get in touch</button>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input class="subscription-form-antispam" type="text" name="mailchimp-embedded-form-antispam-name-attribute" tabindex="-1">
+                </div>
+                <div class="subscription-status"></div>
+              </form>
+
+              <!-- Mobile form -->
+              <form class="needs-validation d-sm-none subscription-form validate mb-3" action="https://sociokraft.us12.list-manage.com/subscribe/post?u=80a707b9b9b7b3a594a5eb5b0&amp;id=0759912701&amp;f_id=0066bce0f0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                <div class="position-relative mb-3">
+                  <input type="email" id="subscr-email" class="form-control rounded-start ps-5" name="EMAIL" placeholder="Your email" required>
+                  <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                  <button type="submit" class="btn btn-primary btn-lg w-100" name="subscribe">Get in touch</button>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input class="subscription-form-antispam" type="text" name="mailchimp-embedded-form-antispam-name-attribute" tabindex="-1">
+                </div>
+                <div class="subscription-status"></div>
+              </form>
+              <p class="fs-sm text-light opacity-50 mb-0">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-lg-3">
+        <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4">
+          <img src="assets/img/logo.png" class="me-2" width="60" alt="Sociokraft">
+          <span class="fs-4">Sociokraft</span>
+        </div>
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="bal.html" class="nav-link">Bal</a></li>
+          <li class="nav-item"><a href="hive.html" class="nav-link">Hive</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+        </ul>
+        <div class="d-flex flex-column flex-sm-row justify-content-center">
+          <a href="#" class="btn btn-dark btn-lg px-3 py-2 me-sm-4 mb-3">
+            <img src="assets/img/market/appstore-light.svg" class="light-mode-img" width="124" alt="App Store">
+            <img src="assets/img/market/appstore-dark.svg" class="dark-mode-img" width="124" alt="App Store">
+          </a>
+          <a href="#" class="btn btn-dark btn-lg px-3 py-2 mb-3">
+            <img src="assets/img/market/googleplay-light.svg" class="light-mode-img" width="139" alt="Google Play">
+            <img src="assets/img/market/googleplay-dark.svg" class="dark-mode-img" width="139" alt="Google Play">
+          </a>
+        </div>
+        <div class="d-flex justify-content-center pt-4 mt-lg-3">
+          <a href="#" class="btn btn-icon btn-secondary btn-facebook mx-2" aria-label="Facebook">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-instagram mx-2" aria-label="Instagram">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-twitter mx-2" aria-label="Twitter">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-youtube mx-2" aria-label="YouTube">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+        <p class="nav d-block fs-sm text-center pt-5 mt-lg-4 mb-0">
+          <span class="opacity-80">&copy; All rights reserved. </span>
+          <a class="nav-link d-inline-block p-0" href="https://sociokraft.com" target="_blank" rel="noopener">Bal by Sociokraft</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/rellax/rellax.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
+
+
+
+
