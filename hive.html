@@ -58,6 +58,12 @@
         opacity: 1;
         visibility: visible;
       }
+      
+.gradient-text {
+  background: -webkit-linear-gradient(-60deg, #7f00ff, #e100ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
       .page-loading-inner {
         position: absolute;
         top: 50%;
@@ -330,7 +336,7 @@
             <!-- Text -->
             <div class="col-xl-5 col-md-6 d-flex flex-column order-md-1">
               <div class="text-center text-md-start pt-4 pt-sm-5 pt-xl-0 mt-2 mt-sm-0 mt-lg-auto">
-                <h1 class="display-3 mb-4">Hive, Elevate Your Influence</h1>
+                <h1 class="display-3 mb-4">Hive, Elevate Your <span class="gradient-text display-3 mb-4">Influence</span></h1>
                 <p class="fs-lg mb-0 d-md-none d-xl-block">Elevate your influence and connect with brands that align with your unique style and audience. Hive, enhanced by IBM Watson AI, simplifies the influencer marketing experience for content creators.</p>
                 <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-md-start pt-2 mt-4 mt-md-5">
                   <a href="#" class="btn btn-dark btn-lg px-3 py-2 me-sm-3 me-lg-4 mb-3">
@@ -359,10 +365,30 @@
 
 
       <!-- Features -->
-      <section class="container py-5 my-md-3 my-lg-4 my-xl-5">
-        <div class="row align-items-center align-items-xl-end py-2 pb-sm-3">
-          <div class="col-md-6 mb-5 mb-md-0">
-            <div style="max-width: 570px;">
+      <section class="bg-secondary overflow-hidden py-2 py-sm-3 py-md-4 py-lg-5">
+
+          <div class="row">
+
+            <!-- Cursor parallax -->
+            <div class="col-xl-5">
+              <div class="parallax" style="max-width: 746px;">
+                <div class="parallax-layer" data-depth="0.1">
+                  <img src="assets/img/landing/startup/mobile-app/01.png" alt="Phone">
+                </div>
+                <div class="parallax-layer" data-depth="0.3">
+                  <img src="assets/img/landing/startup/mobile-app/02.png" alt="Phone">
+                </div>
+                <div class="parallax-layer" data-depth="-0.1">
+                  <img src="assets/img/landing/startup/mobile-app/03.png" alt="Phone">
+                </div>
+                <div class="parallax-layer" data-depth="0.2">
+                  <img src="assets/img/landing/startup/mobile-app/04.png" alt="Phone">
+                </div>
+              </div>
+            </div>
+
+            <!-- Text + Action buttons -->
+            <div class="col-xl-6 order-md-1 text-center text-md-start pt-lg-3">
               <h2 class="h1 pb-3 mb-2 mb-md-3">Get better influencer marketing with Hive</h2>
               <div class="row row-cols-1 row-cols-sm-2 gx-lg-5 g-4">
                 <div class="col d-md-flex d-xl-block align-items-center pt-1 pt-sm-2 pt-md-0 pt-xl-3">
@@ -409,85 +435,109 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="rellax position-relative rounded-3 mb-xl-5" style="box-shadow: -7px 12px 60px 0 rgba(126,123,160, .12);" data-rellax-percentage="0.5" data-rellax-speed="1.3" data-disable-parallax-down="xl">
-              <img src="assets/img/landing/app-showcase-2/stats.jpg" class="d-block rounded-3" alt="Stats screen">
-            </div>
-          </div>
-        </div>
       </section>
-
-
       <!-- How it works (Slider) -->
-      <section class="container py-5 my-md-2 my-lg-4 my-xl-5">
-        <div class="text-center pb-4 mb-3 mx-auto" style="max-width: 530px;">
-          <h2 class="h1">How Does It Work?</h2>
-          <p class="mb-0">Unlocking the potential of influencer marketing with Hive is a breeze. Follow these simple steps to elevate your influencer game:</p>
-        </div>
-        <div class="row align-items-center">
-          <div class="col-md-6 pb-4 pb-md-0 mb-2 mb-md-0">
+      <section class="position-relative bg-secondary py-5">
+        <div class="container mt-3 pt-md-2 pt-lg-4 pb-2 pb-md-4 pb-lg-5">
+          <h2 class="h1 text-center pb-2 pb-md-0 mb-4 mb-md-5">How Does It Work?</h2>
+          <p class="mb-0 text-center pb-2 pb-md-0 mb-4 mb-md-5">Unlocking the potential of influencer marketing with Hive is a breeze. Follow these simple steps to elevate your influencer game:</p>
+          <div class="position-relative mx-5">
 
-            <!-- Swiper tabs -->
-            <div class="position-relative px-5">
-              <div class="swiper-tabs zindex-2 mx-auto" style="max-width: 384px;">
-                <div id="screen-1" class="swiper-tab active">
-                  <img src="assets/img/landing/app-showcase-2/screens/01.png" alt="App screen">
+            <!-- Slider prev/next buttons -->
+            <button type="button" id="prev-screen" class="btn btn-prev btn-icon position-absolute top-50 start-0 ms-n5 translate-middle-y" aria-label="Previous">
+              <i class="bx bx-chevron-left"></i>
+            </button>
+            <button type="button" id="next-screen" class="btn btn-next btn-icon position-absolute top-50 end-0 me-n5 translate-middle-y" aria-label="Next">
+              <i class="bx bx-chevron-right"></i>
+            </button>
+
+            <!-- Phone frame -->
+            <div class="position-absolute top-0 start-50 translate-middle-x h-100 w-100 w-md-33 zindex-5">
+              <div class="d-flex bg-repeat-0 bg-size-cover w-100 h-100 mx-auto" style="max-width: 328px; background-image: url(assets/img/landing/app-showcase-1/screens/phone-frame.png);"></div>
+            </div>
+
+            <!-- Phone screen -->
+            <div class="position-absolute top-0 start-50 translate-middle-x h-100 w-100 w-md-33">
+              <div class="d-flex bg-repeat-0 bg-size-cover w-100 h-100 mx-auto" style="max-width: 328px; background-image: url(assets/img/landing/app-showcase-1/screens/phone-screen.png);"></div>
+            </div>
+
+            <!-- Swiper slider -->
+            <div class="swiper mobile-app-slider" data-swiper-options='{
+              "slidesPerView": 1,
+              "centeredSlides": true,
+              "loop": true,
+              "tabs": true,
+              "pagination": {
+                "el": "#swiper-progress",
+                "type": "progressbar"
+              },
+              "navigation": {
+                "prevEl": "#prev-screen",
+                "nextEl": "#next-screen"
+              },
+              "breakpoints": {
+                "768": { "slidesPerView": 3 }
+              }
+            }'>
+              <div class="swiper-wrapper">
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#text-1">
+                  <img src="assets/img/landing/app-showcase-1/screens/01.png" class="d-block mx-auto" width="328" alt="Screen">
                 </div>
-                <div id="screen-2" class="swiper-tab">
-                  <img src="assets/img/landing/app-showcase-2/screens/02.png" alt="App screen">
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#text-2">
+                  <img src="assets/img/landing/app-showcase-1/screens/02.png" class="d-block mx-auto" width="328" alt="Screen">
                 </div>
-                <div id="screen-3" class="swiper-tab">
-                  <img src="assets/img/landing/app-showcase-2/screens/03.png" alt="App screen">
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#text-3">
+                  <img src="assets/img/landing/app-showcase-1/screens/03.png" class="d-block mx-auto" width="328" alt="Screen">
                 </div>
+
+                <!-- Item -->
+                <div class="swiper-slide" data-swiper-tab="#text-4">
+                  <img src="assets/img/landing/app-showcase-1/screens/04.png" class="d-block mx-auto" width="328" alt="Screen">
+                </div>
+
               </div>
-              <div class="bg-gradient-primary position-absolute start-0 bottom-0 w-100 opacity-15 rounded-3" style="height: 86.5%;"></div>
             </div>
           </div>
-          <div class="col-md-6 col-lg-5 offset-lg-1">
-            <div class="ps-md-4 ps-lg-0">
 
-              <!-- Swiper slider -->
-              <div class="swiper text-center text-md-start mt-auto" data-swiper-options='{
-                "spaceBetween": 30,
-                "loop": true,
-                "tabs": true,
-                "navigation": {
-                  "prevEl": "#prev-screen",
-                  "nextEl": "#next-screen"
-                }
-              }'>
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide" data-swiper-tab="#screen-1">
-                    <div class="fs-xl text-muted mb-3 mb-lg-4">Step 1</div>
-                    <h3 class="mb-lg-4">Create Your Hive Profile</h3>
-                    <p>Start by signing up on Hive and creating your influencer profile. This is your chance to showcase what makes you unique—your style, your niche, and your devoted audience. Your profile is your digital business card, helping brands discover you in the vast world of influencer marketing.</p>
-                  </div>
-                  <div class="swiper-slide" data-swiper-tab="#screen-2">
-                    <div class="fs-xl text-muted mb-3 mb-lg-4">Step 2</div>
-                    <h3 class="mb-lg-4">Brand Collaboration Matching</h3>
-                    <p>Hive operates with a cutting-edge AI algorithm that takes the guesswork out of finding brand collaborations. The moment you're on board, the algorithm gets to work, matching you with brands that share a deep synergy with your content and resonate with your audience. Explore collaboration opportunities that align with your brand, your values, and your message.</p>
-                  </div>
-                  <div class="swiper-slide" data-swiper-tab="#screen-3">
-                    <div class="fs-xl text-muted mb-3 mb-lg-4">Step 3</div>
-                    <h3 class="mb-lg-4">Content Creation & Scheduling</h3>
-                    <p>Effortlessly manage your content creation within Hive's content creation hub. Craft engaging posts, stories, and videos that captivate your audience. The platform offers an integrated scheduling feature, allowing you to plan and publish your content with precision. This ensures you maintain consistency and meet the demands of your content strategy without breaking a sweat.</p>
-                  </div>
-                </div>
+          <!-- Swiper tabs (Description text) -->
+          <div class="row justify-content-center pt-4 mt-2 mt-md-3">
+            <div class="swiper-tabs col-xl-6 col-lg-7 col-md-8 text-center">
+
+              <!-- Text 1 -->
+              <div id="text-1" class="swiper-tab active">
+                <h3 class="h4 pb-1 mb-2">Setep 1. Create Your Hive Profile</h3>
+                <p class="mb-0">Start by signing up on Hive and creating your influencer profile. This is your chance to showcase what makes you unique—your style, your niche, and your devoted audience. Your profile is your digital business card, helping brands discover you in the vast world of influencer marketing.</p>
               </div>
-  
-              <!-- Slider controls (Prev / next) -->
-              <div class="d-flex justify-content-center justify-content-md-start pt-2 pt-lg-3">
-                <button type="button" id="prev-screen" class="btn btn-prev btn-icon btn-sm me-2" aria-label="Previous">
-                  <i class="bx bx-chevron-left"></i>
-                </button>
-                <button type="button" id="next-screen" class="btn btn-next btn-icon btn-sm ms-2" aria-label="Next">
-                  <i class="bx bx-chevron-right"></i>
-                </button>
+
+              <!-- Text 2 -->
+              <div id="text-2" class="swiper-tab">
+                <h3 class="h4 pb-1 mb-2">Step 2. Brand Collaboration Matching</h3>
+                <p class="mb-0">Hive operates with a cutting-edge AI algorithm that takes the guesswork out of finding brand collaborations. The moment you're on board, the algorithm gets to work, matching you with brands that share a deep synergy with your content and resonate with your audience. Explore collaboration opportunities that align with your brand, your values, and your message.</p>
+              </div>
+
+              <!-- Text 3 -->
+              <div id="text-3" class="swiper-tab">
+                <h3 class="h4 pb-1 mb-2">Step 3. Transfers to people from your contact list</h3>
+                <p class="mb-0">Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis fermentum, at nec lacus.</p>
+              </div>
+
+              <!-- Text 4 -->
+              <div id="text-4" class="swiper-tab">
+                <h3 class="h4 pb-1 mb-2">Step 4. Card-to-card transfers</h3>
+                <p class="mb-0">A sed lorem felis, pulvinar pharetra. At tempus, vel sed faucibus amet sit elementum sed erat. Id nunc blandit pharetra facilisis.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <br>
 
       <section class="container pb-5 mb-md-2 mb-lg-4 mb-xl-5">
           
