@@ -1,795 +1,606 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light">
-  <head>
-    <meta charset="utf-8">
-    <title>Sociokraft | Marketing Reimagined</title>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Sociokraft - Multipurpose Marketing Technology">
-    <meta name="keywords" content="business, creative, mobile app, saas, fintech, finance, software, services, e-commerce, shopping, multipurpose, shop, marketing, seo, portfolio">
-    <meta name="author" content="Huseyin Yagiz Devre">
-
-    <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Theme switcher (color modes) -->
-    <script src="assets/js/theme-switcher.js"></script>
-
-    <!-- Favicon and Touch Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicon/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
-    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
-    <meta name="msapplication-TileColor" content="#080032">
-    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-    <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
-
-    <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
-
-
-    <!-- Page loading styles -->
-    <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      [data-bs-theme="dark"] .page-loading {
-        background-color: #0b0f19;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .gradient-text {
-  background: -webkit-linear-gradient(0, #ff00d4, #00ddff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active > .page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner > span {
-        display: block;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #9397ad;
-      }
-      [data-bs-theme="dark"] .page-loading-inner > span {
-        color: #fff;
-        opacity: .6;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      [data-bs-theme="dark"] .page-spinner {
-        border-color: rgba(255,255,255,.4);
-        border-right-color: transparent;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
-        }
-      }
-    </style>
-
-    <!-- Page loading scripts -->
-    <script>
-      (function () {
-        window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function () {
-            preloader.remove();
-          }, 1000);
-        };
-      })();
-    </script>
-  </head>
-
-
-  <!-- Body -->
-  <body>
-
-    <!-- Page loading spinner -->
-    <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
+   <head>
+      <meta charset="utf-8">
+      <title>Sociokraft | Marketing Reimagined</title>
+      <!-- SEO Meta Tags -->
+      <meta name="description" content="Sociokraft - Multipurpose Marketing Technology">
+      <meta name="keywords" content="business, creative, mobile app, saas, fintech, finance, software, services, e-commerce, shopping, multipurpose, shop, marketing, seo, portfolio">
+      <meta name="author" content="Huseyin Yagiz Devre">
+      <!-- Viewport -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Theme switcher (color modes) -->
+      <script src="assets/js/theme-switcher.js"></script>
+      <!-- Favicon and Touch Icons -->
+      <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+      <link rel="manifest" href="assets/favicon/site.webmanifest">
+      <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+      <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+      <meta name="msapplication-TileColor" content="#080032">
+      <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+      <meta name="theme-color" content="#ffffff">
+      <!-- Vendor Styles -->
+      <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css">
+      <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css">
+      <!-- Main Theme Styles + Bootstrap -->
+      <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+      <!-- Page loading styles -->
+      <style>
+         .page-loading {
+         position: fixed;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         -webkit-transition: all .4s .2s ease-in-out;
+         transition: all .4s .2s ease-in-out;
+         background-color: #fff;
+         opacity: 0;
+         visibility: hidden;
+         z-index: 9999;
+         }
+         [data-bs-theme="dark"] .page-loading {
+         background-color: #0b0f19;
+         }
+         .page-loading.active {
+         opacity: 1;
+         visibility: visible;
+         }
+         .gradient-text {
+         background: -webkit-linear-gradient(0, #ff00d4, #00ddff);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         }
+         .page-loading-inner {
+         position: absolute;
+         top: 50%;
+         left: 0;
+         width: 100%;
+         text-align: center;
+         -webkit-transform: translateY(-50%);
+         transform: translateY(-50%);
+         -webkit-transition: opacity .2s ease-in-out;
+         transition: opacity .2s ease-in-out;
+         opacity: 0;
+         }
+         .page-loading.active > .page-loading-inner {
+         opacity: 1;
+         }
+         .page-loading-inner > span {
+         display: block;
+         font-size: 1rem;
+         font-weight: normal;
+         color: #9397ad;
+         }
+         [data-bs-theme="dark"] .page-loading-inner > span {
+         color: #fff;
+         opacity: .6;
+         }
+         .page-spinner {
+         display: inline-block;
+         width: 2.75rem;
+         height: 2.75rem;
+         margin-bottom: .75rem;
+         vertical-align: text-bottom;
+         border: .15em solid #b4b7c9;
+         border-right-color: transparent;
+         border-radius: 50%;
+         -webkit-animation: spinner .75s linear infinite;
+         animation: spinner .75s linear infinite;
+         }
+         [data-bs-theme="dark"] .page-spinner {
+         border-color: rgba(255,255,255,.4);
+         border-right-color: transparent;
+         }
+         @-webkit-keyframes spinner {
+         100% {
+         -webkit-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         }
+         @keyframes spinner {
+         100% {
+         -webkit-transform: rotate(360deg);
+         transform: rotate(360deg);
+         }
+         }
+      </style>
+      <!-- Page loading scripts -->
+      <script>
+         (function () {
+           window.onload = function () {
+             const preloader = document.querySelector('.page-loading');
+             preloader.classList.remove('active');
+             setTimeout(function () {
+               preloader.remove();
+             }, 1000);
+           };
+         })();
+      </script>
+   </head>
+   <!-- Body -->
+   <body>
+      <!-- Page loading spinner -->
+      <div class="page-loading active">
+         <div class="page-loading-inner">
+            <div class="page-spinner"></div>
+            <span>Loading...</span>
+         </div>
       </div>
-    </div>
-
-
-    <!-- Page wrapper for sticky footer -->
-    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
-    <main class="page-wrapper">
-        <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+      <!-- Page wrapper for sticky footer -->
+      <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+      <main class="page-wrapper">
+         <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
             <div class="container px-3">
-              <a href="index.html" class="navbar-brand pe-3">
-                Sociokraft
-              </a>
-              <div id="navbarNav" class="offcanvas offcanvas-end">
-                <div class="offcanvas-header border-bottom">
-                  <h5 class="offcanvas-title">Menu</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!--
-                      <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page">Landings</a>
-                        <div class="dropdown-menu p-0">
-                          <div class="d-lg-flex">
-                            <div class="mega-dropdown-column d-flex justify-content-center align-items-center rounded-3 rounded-end-0 px-0" style="margin: -1px; background-color: #f3f6ff;">
-                              <img src="assets/img/landings.jpg" alt="Landings">
-                            </div>
-                            <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
-                              <ul class="list-unstyled mb-0">
-                                <li><a href="index.html" class="dropdown-item">Template Intro Page</a></li>
-                                <li><a href="landing-mobile-app-showcase-v1.html" class="dropdown-item">Mobile App Showcase v.1</a></li>
-                                <li><a href="landing-mobile-app-showcase-v2.html" class="dropdown-item">Mobile App Showcase v.2</a></li>
-                                <li><a href="landing-product.html" class="dropdown-item d-flex align-items-center">Product Landing</a></li>
-                                <li><a href="landing-startup.html" class="dropdown-item d-flex align-items-center">Startup</a></li>
-                                <li><a href="landing-saas-v1.html" class="dropdown-item">SaaS v.1</a></li>
-                                <li><a href="landing-saas-v2.html" class="dropdown-item">SaaS v.2</a></li>
-                                <li><a href="landing-saas-v3.html" class="dropdown-item">SaaS v.3</a></li>
-                                <li><a href="landing-saas-v4.html" class="dropdown-item">SaaS v.4<span class="badge bg-success ms-2">New</span></a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-dropdown-column pt-lg-3 pb-lg-4" style="--si-mega-dropdown-column-width: 16rem;">
-                              <ul class="list-unstyled mb-0">
-                                <li><a href="landing-financial.html" class="dropdown-item">Financial Consulting</a></li>
-                                <li><a href="landing-online-courses.html" class="dropdown-item">Online Courses</a></li>
-                                <li><a href="landing-medical.html" class="dropdown-item">Medical</a></li>
-                                <li><a href="landing-software-dev-agency-v1.html" class="dropdown-item">Software Dev Agency v.1</a></li>
-                                <li><a href="landing-software-dev-agency-v2.html" class="dropdown-item">Software Dev Agency v.2<span class="badge bg-success ms-2">New</span></a></li>
-                                <li><a href="landing-software-dev-agency-v3.html" class="dropdown-item">Software Dev Agency v.3<span class="badge bg-success ms-2">New</span></a></li>
-                                <li><a href="landing-conference.html" class="dropdown-item">Conference</a></li>
-                                <li><a href="landing-digital-agency.html" class="dropdown-item">Digital Agency</a></li>
-                                <li><a href="landing-blog.html" class="dropdown-item">Blog Homepage</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu">
-                          <div class="d-lg-flex pt-lg-3">
-                            <div class="mega-dropdown-column">
-                              <h6 class="px-3 mb-2">About</h6>
-                              <ul class="list-unstyled mb-3">
-                                <li><a href="about-v1.html" class="dropdown-item py-1">About v.1</a></li>
-                                <li><a href="about-v2.html" class="dropdown-item py-1">About v.2</a></li>
-                                <li><a href="about-v3.html" class="dropdown-item py-1">About v.3</a></li>
-                              </ul>
-                              <h6 class="px-3 mb-2">Blog</h6>
-                              <ul class="list-unstyled mb-3">
-                                <li><a href="blog-list-with-sidebar.html" class="dropdown-item py-1">List View with Sidebar</a></li>
-                                <li><a href="blog-grid-with-sidebar.html" class="dropdown-item py-1">Grid View with Sidebar</a></li>
-                                <li><a href="blog-list-no-sidebar.html" class="dropdown-item py-1">List View no Sidebar</a></li>
-                                <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
-                                <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
-                                <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
-                                <li><a href="blog-podcast.html" class="dropdown-item py-1">Podcast</a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-dropdown-column">
-                              <h6 class="px-3 mb-2">Portfolio</h6>
-                              <ul class="list-unstyled mb-3">
-                                <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
-                                <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
-                                <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
-                                <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
-                                <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
-                                <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
-                              </ul>
-                              <h6 class="px-3 mb-2">Services</h6>
-                              <ul class="list-unstyled mb-3">
-                                <li><a href="services-v1.html" class="dropdown-item py-1">Services v.1</a></li>
-                                <li><a href="services-v2.html" class="dropdown-item py-1">Services v.2</a></li>
-                                <li><a href="services-single-v1.html" class="dropdown-item py-1">Service Details v.1</a></li>
-                                <li><a href="services-single-v2.html" class="dropdown-item py-1">Service Details v.2</a></li>
-                              </ul>
-                            </div>
-                            <div class="mega-dropdown-column">
-                              <h6 class="px-3 mb-2">Pricing</h6>
-                              <ul class="list-unstyled mb-3">
-                                <li><a href="pricing.html" class="dropdown-item py-1">Pricing Page</a></li>
-                              </ul>
-                              <h6 class="px-3 mb-2">Contacts</h6>
-                              <ul class="list-unstyled mb-3">
-                                <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
-                                <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
-                                <li><a href="contacts-v3.html" class="dropdown-item py-1">Contacts v.3</a></li>
-                              </ul>
-                              <h6 class="px-3 mb-2">Specialty</h6>
-                              <ul class="list-unstyled">
-                                <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
-                                <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
-                        <ul class="dropdown-menu">
-                          <li><a href="account-details.html" class="dropdown-item">Account Details</a></li>
-                          <li><a href="account-security.html" class="dropdown-item">Security</a></li>
-                          <li><a href="account-notifications.html" class="dropdown-item">Notifications</a></li>
-                          <li><a href="account-messages.html" class="dropdown-item">Messages</a></li>
-                          <li><a href="account-saved-items.html" class="dropdown-item">Saved Items</a></li>
-                          <li><a href="account-collections.html" class="dropdown-item">My Collections</a></li>
-                          <li><a href="account-payment.html" class="dropdown-item">Payment Details</a></li>
-                          <li><a href="account-signin.html" class="dropdown-item">Sign In</a></li>
-                          <li><a href="account-signup.html" class="dropdown-item">Sign Up</a></li>
-                        </ul>
-                      </li>
-      
-                      -->
-                    <li class="nav-item">
-                      <a href="bal.html" class="nav-link">Bal</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="hive.html" class="nav-link">Hive</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="contact.html" class="nav-link">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pricing.html" class="nav-link">Pricing</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="offcanvas-header border-top">
-                  <a href="contact.html"
-                    class="btn btn-primary w-100" target="_blank" rel="noopener">
-                    Contact Us!
-                  </a>
-                </div>
-              </div>
-              <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
-                <input type="checkbox" class="form-check-input" id="theme-mode" checked>
-                <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-                <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
-              </div>
-              <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <a href="contact.html"
-              class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
-              Contact Us!
-            </a>
-            </div>
-          </header>
-
-      <!-- Hero -->
-      <section class="position-relative overflow-hidden py-4 mb-3" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
-              <div class="position-relative zindex-4 pt-lg-3 pt-xl-5">
-        
-                <!-- Text -->
-                <div class="container zindex-5 pt-5">
-                  <div class="row justify-content-center text-center pt-4 pb-sm-2 py-lg-5">
-                    <div class="col-xl-8 col-lg-9 col-md-10 py-5">
-                      <h2 class="gradient-text">Attribution Redefined</h2>
-                      <h1 class="display-4 pb-1 pb-sm-3 mb-3">The <span class="text-primary">Fastest</span> and <span class="text-primary">Easiest</span> Way to Reach to Your Customer-Base</h1>
-                      <p class="fs-lg opacity-70 pb-2 pb-sm-0 mb-4 mb-sm-5">Sociokraft is a technology company on a mission to revolutionize marketing. We develop innovative solutions to connect businesses, influencers, and consumers.</p>
-                      <div class="justify-content-lg-center d-flex flex-column flex-sm-row ">
-                        <a href="#" class="btn btn-secondary shadow-sm btn-lg me-sm-3 me-lg-4 mb-3">Book a Call</a>
-                        <a href="#" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-lg-4 mb-3">Play With the Live Demo</a>
-                      </div>
-                      <div class="mt-xl-1">
-                        <h5 class="pt-xl-3 pb-3 pb-lg-4">Backed and Funded by</h5>
-                        <div class="d-flex justify-content-center mx-xl-n2">
-                          <a href="#" class="d-block me-2">
-                            <img src="assets/img/brands/07.svg" width="135" alt="Logo">
-                          </a>
-                          <a href="#" class="d-block me-2">
-                            <img src="assets/img/brands/04.svg" width="135" alt="Logo">
-                          </a>
-                          <a href="#" class="d-block me-2">
-                            <img src="assets/img/brands/02.svg" width="135" alt="Logo">
-                          </a>
-                          <a href="#" class="d-block me-2">
-                            <img src="assets/img/brands/05.svg" width="135" alt="Logo">
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+               <a href="index.html" class="navbar-brand pe-3">
+               Sociokraft
+               </a>
+               <div id="navbarNav" class="offcanvas offcanvas-end">
+                  <div class="offcanvas-header border-bottom">
+                     <h5 class="offcanvas-title">Menu</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
-                </div>
-      
-                <div class="d-none d-lg-block" style="height: 300px;"></div>
-                <div class="d-none d-md-block d-lg-none" style="height: 150px;"></div>
-              </div>
-              <div class="position-relative zindex-5 mx-auto" style="max-width: 1250px; transform: translateZ(-100px);">
-                <div class="d-none d-lg-block" style="margin-top: -300px;"></div>
-                <div class="d-none d-md-block d-lg-none" style="margin-top: -150px;"></div>
-                  
-                <!-- Parallax (3D Tilt) gfx -->
-                <div class="tilt-3d" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-perspective="1200">
+                  <div class="offcanvas-body">
+                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!--
+                           <li class="nav-item dropdown">
+                             <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-current="page">Landings</a>
+                             <div class="dropdown-menu p-0">
+                               <div class="d-lg-flex">
+                                 <div class="mega-dropdown-column d-flex justify-content-center align-items-center rounded-3 rounded-end-0 px-0" style="margin: -1px; background-color: #f3f6ff;">
+                                   <img src="assets/img/landings.jpg" alt="Landings">
+                                 </div>
+                                 <div class="mega-dropdown-column pt-lg-3 pb-lg-4">
+                                   <ul class="list-unstyled mb-0">
+                                     <li><a href="index.html" class="dropdown-item">Template Intro Page</a></li>
+                                     <li><a href="landing-mobile-app-showcase-v1.html" class="dropdown-item">Mobile App Showcase v.1</a></li>
+                                     <li><a href="landing-mobile-app-showcase-v2.html" class="dropdown-item">Mobile App Showcase v.2</a></li>
+                                     <li><a href="landing-product.html" class="dropdown-item d-flex align-items-center">Product Landing</a></li>
+                                     <li><a href="landing-startup.html" class="dropdown-item d-flex align-items-center">Startup</a></li>
+                                     <li><a href="landing-saas-v1.html" class="dropdown-item">SaaS v.1</a></li>
+                                     <li><a href="landing-saas-v2.html" class="dropdown-item">SaaS v.2</a></li>
+                                     <li><a href="landing-saas-v3.html" class="dropdown-item">SaaS v.3</a></li>
+                                     <li><a href="landing-saas-v4.html" class="dropdown-item">SaaS v.4<span class="badge bg-success ms-2">New</span></a></li>
+                                   </ul>
+                                 </div>
+                                 <div class="mega-dropdown-column pt-lg-3 pb-lg-4" style="--si-mega-dropdown-column-width: 16rem;">
+                                   <ul class="list-unstyled mb-0">
+                                     <li><a href="landing-financial.html" class="dropdown-item">Financial Consulting</a></li>
+                                     <li><a href="landing-online-courses.html" class="dropdown-item">Online Courses</a></li>
+                                     <li><a href="landing-medical.html" class="dropdown-item">Medical</a></li>
+                                     <li><a href="landing-software-dev-agency-v1.html" class="dropdown-item">Software Dev Agency v.1</a></li>
+                                     <li><a href="landing-software-dev-agency-v2.html" class="dropdown-item">Software Dev Agency v.2<span class="badge bg-success ms-2">New</span></a></li>
+                                     <li><a href="landing-software-dev-agency-v3.html" class="dropdown-item">Software Dev Agency v.3<span class="badge bg-success ms-2">New</span></a></li>
+                                     <li><a href="landing-conference.html" class="dropdown-item">Conference</a></li>
+                                     <li><a href="landing-digital-agency.html" class="dropdown-item">Digital Agency</a></li>
+                                     <li><a href="landing-blog.html" class="dropdown-item">Blog Homepage</a></li>
+                                   </ul>
+                                 </div>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="nav-item dropdown">
+                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                             <div class="dropdown-menu">
+                               <div class="d-lg-flex pt-lg-3">
+                                 <div class="mega-dropdown-column">
+                                   <h6 class="px-3 mb-2">About</h6>
+                                   <ul class="list-unstyled mb-3">
+                                     <li><a href="about-v1.html" class="dropdown-item py-1">About v.1</a></li>
+                                     <li><a href="about-v2.html" class="dropdown-item py-1">About v.2</a></li>
+                                     <li><a href="about-v3.html" class="dropdown-item py-1">About v.3</a></li>
+                                   </ul>
+                                   <h6 class="px-3 mb-2">Blog</h6>
+                                   <ul class="list-unstyled mb-3">
+                                     <li><a href="blog-list-with-sidebar.html" class="dropdown-item py-1">List View with Sidebar</a></li>
+                                     <li><a href="blog-grid-with-sidebar.html" class="dropdown-item py-1">Grid View with Sidebar</a></li>
+                                     <li><a href="blog-list-no-sidebar.html" class="dropdown-item py-1">List View no Sidebar</a></li>
+                                     <li><a href="blog-grid-no-sidebar.html" class="dropdown-item py-1">Grid View no Sidebar</a></li>
+                                     <li><a href="blog-simple-feed.html" class="dropdown-item py-1">Simple Feed</a></li>
+                                     <li><a href="blog-single.html" class="dropdown-item py-1">Single Post</a></li>
+                                     <li><a href="blog-podcast.html" class="dropdown-item py-1">Podcast</a></li>
+                                   </ul>
+                                 </div>
+                                 <div class="mega-dropdown-column">
+                                   <h6 class="px-3 mb-2">Portfolio</h6>
+                                   <ul class="list-unstyled mb-3">
+                                     <li><a href="portfolio-grid.html" class="dropdown-item py-1">Grid View</a></li>
+                                     <li><a href="portfolio-list.html" class="dropdown-item py-1">List View</a></li>
+                                     <li><a href="portfolio-slider.html" class="dropdown-item py-1">Slider View</a></li>
+                                     <li><a href="portfolio-courses.html" class="dropdown-item py-1">Courses</a></li>
+                                     <li><a href="portfolio-single-project.html" class="dropdown-item py-1">Single Project</a></li>
+                                     <li><a href="portfolio-single-course.html" class="dropdown-item py-1">Single Course</a></li>
+                                   </ul>
+                                   <h6 class="px-3 mb-2">Services</h6>
+                                   <ul class="list-unstyled mb-3">
+                                     <li><a href="services-v1.html" class="dropdown-item py-1">Services v.1</a></li>
+                                     <li><a href="services-v2.html" class="dropdown-item py-1">Services v.2</a></li>
+                                     <li><a href="services-single-v1.html" class="dropdown-item py-1">Service Details v.1</a></li>
+                                     <li><a href="services-single-v2.html" class="dropdown-item py-1">Service Details v.2</a></li>
+                                   </ul>
+                                 </div>
+                                 <div class="mega-dropdown-column">
+                                   <h6 class="px-3 mb-2">Pricing</h6>
+                                   <ul class="list-unstyled mb-3">
+                                     <li><a href="pricing.html" class="dropdown-item py-1">Pricing Page</a></li>
+                                   </ul>
+                                   <h6 class="px-3 mb-2">Contacts</h6>
+                                   <ul class="list-unstyled mb-3">
+                                     <li><a href="contacts-v1.html" class="dropdown-item py-1">Contacts v.1</a></li>
+                                     <li><a href="contacts-v2.html" class="dropdown-item py-1">Contacts v.2</a></li>
+                                     <li><a href="contacts-v3.html" class="dropdown-item py-1">Contacts v.3</a></li>
+                                   </ul>
+                                   <h6 class="px-3 mb-2">Specialty</h6>
+                                   <ul class="list-unstyled">
+                                     <li><a href="404-v1.html" class="dropdown-item py-1">404 Error v.1</a></li>
+                                     <li><a href="404-v2.html" class="dropdown-item py-1">404 Error v.2</a></li>
+                                   </ul>
+                                 </div>
+                               </div>
+                             </div>
+                           </li>
+                           <li class="nav-item dropdown">
+                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account</a>
+                             <ul class="dropdown-menu">
+                               <li><a href="account-details.html" class="dropdown-item">Account Details</a></li>
+                               <li><a href="account-security.html" class="dropdown-item">Security</a></li>
+                               <li><a href="account-notifications.html" class="dropdown-item">Notifications</a></li>
+                               <li><a href="account-messages.html" class="dropdown-item">Messages</a></li>
+                               <li><a href="account-saved-items.html" class="dropdown-item">Saved Items</a></li>
+                               <li><a href="account-collections.html" class="dropdown-item">My Collections</a></li>
+                               <li><a href="account-payment.html" class="dropdown-item">Payment Details</a></li>
+                               <li><a href="account-signin.html" class="dropdown-item">Sign In</a></li>
+                               <li><a href="account-signup.html" class="dropdown-item">Sign Up</a></li>
+                             </ul>
+                           </li>
+                           
+                           -->
+                        <li class="nav-item">
+                           <a href="bal.html" class="nav-link">Bal</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="hive.html" class="nav-link">Hive</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="contact.html" class="nav-link">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                           <a href="pricing.html" class="nav-link">Pricing</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="offcanvas-header border-top">
+                     <a href="contact.html"
+                        class="btn btn-primary w-100" target="_blank" rel="noopener">
+                     Contact Us!
+                     </a>
+                  </div>
+               </div>
+               <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                  <input type="checkbox" class="form-check-input" id="theme-mode" checked>
+                  <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+                  <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+               </div>
+               <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <a href="contact.html"
+                  class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex" target="_blank" rel="noopener">
+               Contact Us!
+               </a>
+            </div>
+         </header>
+         <!-- Hero -->
+         <section class="position-relative overflow-hidden py-4 mb-3" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);">
+            <div class="position-relative zindex-4 pt-lg-3 pt-xl-5">
+               <!-- Text -->
+               <div class="container zindex-5 pt-5">
+                  <div class="row justify-content-center text-center pt-4 pb-sm-2 py-lg-5">
+                     <div class="col-xl-8 col-lg-9 col-md-10 py-5">
+                        <h2 class="gradient-text">Attribution Redefined</h2>
+                        <h1 class="display-4 pb-1 pb-sm-3 mb-3">The <span class="text-primary">Fastest</span> and <span class="text-primary">Easiest</span> Way to Reach to Your Customer-Base</h1>
+                        <p class="fs-lg opacity-70 pb-2 pb-sm-0 mb-4 mb-sm-5">Sociokraft is a technology company on a mission to revolutionize marketing. We develop innovative solutions to connect businesses, influencers, and consumers.</p>
+                        <div class="justify-content-lg-center d-flex flex-column flex-sm-row ">
+                           <a href="contact.html" class="btn btn-secondary shadow-sm btn-lg me-sm-3 me-lg-4 mb-3">Book a Call</a>
+                           <a href="https://dashboard.sociokraft.com/" class="btn btn-primary shadow-primary btn-lg me-sm-3 me-lg-4 mb-3">Play With the Live Demo</a>
+                        </div>
+                        <div class="mt-xl-1">
+                           <h5 class="pt-xl-3 pb-3 pb-lg-4">Backed and Funded by</h5>
+                           <div class="d-flex justify-content-center mx-xl-n2">
+                              <a href="#" class="d-block me-2">
+                              <img src="assets/img/brands/07.svg" width="135" alt="Logo">
+                              </a>
+                              <a href="#" class="d-block me-2">
+                              <img src="assets/img/brands/04.svg" width="135" alt="Logo">
+                              </a>
+                              <a href="#" class="d-block me-2">
+                              <img src="assets/img/brands/02.svg" width="135" alt="Logo">
+                              </a>
+                              <a href="#" class="d-block me-2">
+                              <img src="assets/img/brands/05.svg" width="135" alt="Logo">
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-none d-lg-block" style="height: 300px;"></div>
+               <div class="d-none d-md-block d-lg-none" style="height: 150px;"></div>
+            </div>
+            <div class="position-relative zindex-5 mx-auto" style="max-width: 1250px; transform: translateZ(-100px);">
+               <div class="d-none d-lg-block" style="margin-top: -300px;"></div>
+               <div class="d-none d-md-block d-lg-none" style="margin-top: -150px;"></div>
+               <!-- Parallax (3D Tilt) gfx -->
+               <div class="tilt-3d" data-tilt data-tilt-full-page-listening data-tilt-max="5" data-tilt-perspective="1200">
                   <img src="assets/img/landing/saas-2/hero/layer01.png" alt="Dashboard">
                   <div class="tilt-3d-inner position-absolute top-0 start-0 w-100 h-100">
-                    <img src="assets/img/landing/saas-2/hero/layer02.png" alt="Cards">
+                     <img src="assets/img/landing/saas-2/hero/layer02.png" alt="Cards">
                   </div>
-                </div>
-              </div>
-      </section>
-
-
-      <!-- Features (Icon + Text) -->
-      <section class="container">
-        <h2 class="h1 text-center pb-4 pb-lg-5"></h2>
-        <h2 class="h1 text-center pb-4 pb-lg-5"> Marketing Reimagined</h2>
-        <div class="row">
-          <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
-            <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
-              <img src="assets/img/landing/saas-1/features/chat.svg" width="32" alt="Icon">
+               </div>
             </div>
-            <h3 class="h5 pb-1 mb-2">Product Insights & Comments</h3>
-            <p class="fs-sm">Gather valuable insights and comments on your products, enabling you to understand customer feedback and preferences.</p>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
-            <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
-              <img src="assets/img/landing/saas-1/features/analytics.svg" width="32" alt="Icon">
-            </div>
-            <h3 class="h5 pb-1 mb-2">Product Analytics</h3>
-            <p class="fs-sm">Access in-depth product analytics to make data-driven decisions and enhance your product offerings.</p>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
-            <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
-              <img src="assets/img/landing/saas-1/features/bell.svg" width="32" alt="Icon">
-            </div>
-            <h3 class="h5 pb-1 mb-2">Real-time Notifications</h3>
-            <p class="fs-sm">Stay updated with real-time notifications about market trends, consumer behavior, and marketplace insights.</p>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
-            <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
-              <img src="assets/img/landing/saas-1/features/tasks.svg" width="32" alt="Icon">
-            </div>
-            <h3 class="h5 pb-1 mb-2">Customized Engagement</h3>
-            <p class="fs-sm">Tailor engagement strategies to match your company's unique needs and goals, maximizing your marketing impact.</p>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
-            <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
-              <img src="assets/img/landing/saas-1/features/calendar.svg" width="32" alt="Icon">
-            </div>
-            <h3 class="h5 pb-1 mb-2">Timely Marketing</h3>
-            <p class="fs-sm">Plan your marketing campaigns with a calendar of insights, ensuring your strategies align with consumer trends.</p>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
-            <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
-              <img src="assets/img/landing/saas-1/features/add-group.svg" width="32" alt="Icon">
-            </div>
-            <h3 class="h5 pb-1 mb-2">Influencer Marketing</h3>
-            <p class="fs-sm">Connect with influencers and amplify your brand's reach through strategic influencer partnerships.</p>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
-            <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
-              <img src="assets/img/landing/saas-1/features/headset.svg" width="32" alt="Icon">
-            </div>
-            <h3 class="h5 pb-1 mb-2">24/7 Support</h3>
-            <p class="fs-sm">Our dedicated support team is available 24/7 to assist your company with any inquiries or concerns.</p>
-          </div>
-          <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
-            <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
-              <img src="assets/img/landing/saas-1/features/shield.svg" width="32" alt="Icon">
-            </div>
-            <h3 class="h5 pb-1 mb-2">Advanced Data Security</h3>
-            <p class="fs-sm">We prioritize the security of your data, implementing robust measures to protect sensitive information.</p>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Dashboard -->
-      <section class="container pt-3 pt-md-4 pt-lg-5 pb-2 mt-lg-2 mt-xl-4">
-        <h2 class="h1 text-center pb-1 mb-2">What you can do with Sociokraft</h2>
-          <p class="fs-lg text-center pb-lg-2">Well, lots of things. Some of them are listed below</p>
-        <div class="row align-items-center">
-          <div class="rellax col-md-7" data-rellax-percentage="0.5" data-rellax-speed="-0.6" data-disable-parallax-down="lg">
-            <img src="assets/img/landing/saas-1/dashboard.png" class="d-block mx-auto" width="746" alt="Image">
-          </div>
-          <div class="rellax col-md-5 col-xl-4 offset-xl-1 d-flex d-sm-block flex-column" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="lg">
-            <h2 class="pb-3 pt-2 pt-md-0">Next-Gen Marketing</h2>
-            <ul class="list-unstyled pb-2">
-              <li class="d-flex align-items-center pb-1 mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                Powerful product insights
-              </li>
-              <li class="d-flex align-items-center pb-1 mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                Direct customer segmentation and demographics
-              </li>
-              <li class="d-flex align-items-center pb-1 mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                AI integrated influencer marketting
-              </li>
-              <li class="d-flex align-items-center pb-1 mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                Enhanced customer engagement
-              </li>
-              <li class="d-flex align-items-center pb-1 mb-2">
-                <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
-                Real-time market trend analysis
-              </li>
-            </ul>
-            <a href="#" class="btn btn-primary">
-              Learn more
-              <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
-            </a>
-          </div>
-        </div>
-        <div class="row align-items-center my-3 py-md-3 py-lg-5">
-            <div class="col-md-6 col-xl-5 offset-lg-1 offset-xl-2 order-md-2 mb-2 mb-md-0 pb-4 pb-md-0">
-              <div class="position-relative mx-auto mx-md-0" style="max-width: 469px;">
-                <img src="assets/img/landing/app-showcase-1/features/screen01.png" class="rellax d-block" alt="Screen" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md">
-                <div class="rellax position-absolute top-0 end-0 w-100 h-100" data-rellax-percentage="0.5" data-rellax-speed="0.75" data-disable-parallax-down="md">
-                  <img src="assets/img/landing/app-showcase-1/features/screen02.png" alt="Screen">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-5 col-xl-4 offset-xl-1 order-md-1 pb-md-4">
-              <h2 class="pb-3">Make your money transfer simple and clear</h2>
-              <ul class="list-unstyled pb-3 mb-3">
-                <li class="d-flex align-items-center mb-2">
-                  <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
-                  Banking transactions are free for you
-                </li>
-                <li class="d-flex align-items-center mb-2">
-                  <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
-                  No monthly cash commission
-                </li>
-                <li class="d-flex align-items-center mb-2">
-                  <i class="bx bx-check-circle fs-xl text-primary me-2"></i>
-                  Manage payments and transactions online
-                </li>
-              </ul>
-              <a href="#" class="btn btn-primary">
-                Learn more
-                <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
-              </a>
-            </div>
-          </div>
-          <div class="row align-items-center mt-2 mt-md-0 pt-5 pt-md-4 pt-lg-0 pb-md-3 pb-lg-5">
-            <div class="col-md-6 col-lg-5 offset-xl-1 mb-2 mb-md-0 pb-4 pb-md-0">
-              <div class="position-relative mx-auto mx-md-0" style="max-width: 462px;">
-                <img src="assets/img/landing/app-showcase-1/features/screen03.png" class="rellax d-block" alt="Screen" data-rellax-percentage="0.5" data-rellax-speed="-0.5" data-disable-parallax-down="md">
-                <div class="rellax position-absolute top-0 end-0 w-100 h-100 me-md-n3" data-rellax-percentage="0.5" data-rellax-speed="0.75" data-disable-parallax-down="md">
-                  <img src="assets/img/landing/app-showcase-1/features/screen04.png" alt="Screen">
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-xl-5 offset-lg-1">
-              <h2 class="pb-3">Receive payment from international bank details</h2>
-              <div class="row row-cols-1 row-cols-sm-2 text-start pb-3">
-                <div class="col pb-4">
-                  <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
-                    <img src="assets/img/landing/app-showcase-1/features/payments.svg" alt="Easy Payments">
+         </section>
+         <!-- Features (Icon + Text) -->
+         <section class="container">
+            <h2 class="h1 text-center pb-4 pb-lg-5"></h2>
+            <h2 class="h1 text-center pb-4 pb-lg-5"> Marketing Reimagined</h2>
+            <div class="row">
+               <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
+                  <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
+                     <img src="assets/img/landing/saas-1/features/chat.svg" width="32" alt="Icon">
                   </div>
-                  <p class="mb-0">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
-                </div>
-                <div class="col pb-4">
-                  <div class="d-table bg-secondary rounded-3 flex-shrink-0 p-3 mb-3">
-                    <img src="assets/img/landing/app-showcase-1/features/cashback.svg" alt="Regular Cashback">
+                  <h3 class="h5 pb-1 mb-2">Product Insights & Comments</h3>
+                  <p class="fs-sm">Gather valuable insights and comments on your products, enabling you to understand customer feedback and preferences.</p>
+               </div>
+               <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
+                  <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
+                     <img src="assets/img/landing/saas-1/features/analytics.svg" width="32" alt="Icon">
                   </div>
-                  <p class="mb-0">A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
-                </div>
-              </div>
-              <a href="#" class="btn btn-primary">
-                Learn more
-                <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
-              </a>
+                  <h3 class="h5 pb-1 mb-2">Product Analytics</h3>
+                  <p class="fs-sm">Access in-depth product analytics to make data-driven decisions and enhance your product offerings.</p>
+               </div>
+               <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
+                  <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
+                     <img src="assets/img/landing/saas-1/features/bell.svg" width="32" alt="Icon">
+                  </div>
+                  <h3 class="h5 pb-1 mb-2">Real-time Notifications</h3>
+                  <p class="fs-sm">Stay updated with real-time notifications about market trends, consumer behavior, and marketplace insights.</p>
+               </div>
+               <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
+                  <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
+                     <img src="assets/img/landing/saas-1/features/tasks.svg" width="32" alt="Icon">
+                  </div>
+                  <h3 class="h5 pb-1 mb-2">Customized Engagement</h3>
+                  <p class="fs-sm">Tailor engagement strategies to match your company's unique needs and goals, maximizing your marketing impact.</p>
+               </div>
+               <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
+                  <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
+                     <img src="assets/img/landing/saas-1/features/calendar.svg" width="32" alt="Icon">
+                  </div>
+                  <h3 class="h5 pb-1 mb-2">Timely Marketing</h3>
+                  <p class="fs-sm">Plan your marketing campaigns with a calendar of insights, ensuring your strategies align with consumer trends.</p>
+               </div>
+               <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
+                  <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
+                     <img src="assets/img/landing/saas-1/features/add-group.svg" width="32" alt="Icon">
+                  </div>
+                  <h3 class="h5 pb-1 mb-2">Influencer Marketing</h3>
+                  <p class="fs-sm">Connect with influencers and amplify your brand's reach through strategic influencer partnerships.</p>
+               </div>
+               <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
+                  <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
+                     <img src="assets/img/landing/saas-1/features/headset.svg" width="32" alt="Icon">
+                  </div>
+                  <h3 class="h5 pb-1 mb-2">24/7 Support</h3>
+                  <p class="fs-sm">Our dedicated support team is available 24/7 to assist your company with any inquiries or concerns.</p>
+               </div>
+               <div class="col-lg-3 col-md-4 col-sm-6 text-center pb-md-2 mb-3 mb-lg-4">
+                  <div class="d-inline-block bg-secondary rounded-circle p-3 mb-4">
+                     <img src="assets/img/landing/saas-1/features/shield.svg" width="32" alt="Icon">
+                  </div>
+                  <h3 class="h5 pb-1 mb-2">Advanced Data Security</h3>
+                  <p class="fs-sm">We prioritize the security of your data, implementing robust measures to protect sensitive information.</p>
+               </div>
+            </div>
+         </section>
+         <!-- Dashboard -->
+         <section class="container pt-3 pt-md-4 pt-lg-5 pb-2 mt-lg-2 mt-xl-4">
+            <h2 class="h1 text-center pb-1 mb-2">What you can do with Sociokraft</h2>
+            <p class="fs-lg text-center pb-lg-2">Well, lots of things. Some of them are listed below</p>
+            <br>
+            <div class="row align-items-center">
+               <div class="rellax col-md-7" data-rellax-percentage="0.5" data-rellax-speed="-0.6" data-disable-parallax-down="lg">
+                  <img src="assets/img/landing/saas-1/dashboard.png" class="d-block mx-auto" width="1000" alt="Image">
+               </div>
+               <div class="rellax col-md-5 col-xl-4 offset-xl-1 d-flex d-sm-block flex-column" data-rellax-percentage="0.5" data-rellax-speed="0.8" data-disable-parallax-down="lg">
+                  <h2 class="pb-3 pt-2 pt-md-0">Next-Gen Marketing</h2>
+                  <ul class="list-unstyled pb-2">
+                     <li class="d-flex align-items-center pb-1 mb-2">
+                        <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                        Powerful product insights
+                     </li>
+                     <li class="d-flex align-items-center pb-1 mb-2">
+                        <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                        Direct customer segmentation and demographics
+                     </li>
+                     <li class="d-flex align-items-center pb-1 mb-2">
+                        <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                        AI integrated influencer marketting
+                     </li>
+                     <li class="d-flex align-items-center pb-1 mb-2">
+                        <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                        Enhanced customer engagement
+                     </li>
+                     <li class="d-flex align-items-center pb-1 mb-2">
+                        <i class="bx bx-check-circle text-primary fs-xl me-2"></i>
+                        Real-time market trend analysis
+                     </li>
+                  </ul>
+                  <a href="#" class="btn btn-primary">
+                  Learn more
+                  <i class="bx bx-right-arrow-alt fs-xl ms-2"></i>
+                  </a>
+               </div>
             </div>
 
-            
             <div class="row align-items-center justify-content-center py-4 py-md-5 my-1 my-sm-3 my-md-0 my-xl-3">
-                <div class="col-11 col-sm-9 col-md-7 col-lg-6 offset-lg-1 order-md-2 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
+               <div class="col-11 col-sm-9 col-md-7 col-lg-6 offset-lg-1 order-md-2 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
                   <div class="parallax" style="max-width: 636px;">
-                    <div class="parallax-layer" data-depth="0">
-                      <div class="ratio" style="--si-aspect-ratio: 89.6%"></div>
-                    </div>
-                    <div class="parallax-layer" style="padding-right: 24.2%;" data-depth="0.1">
-                      <img src="assets/img/landing/saas-5/use-cases/data-analysis/line-chart-light.png" class="d-dark-mode-none position-relative rounded-3" style="top: 27.5%; max-width: 482px; box-shadow: 0 12px 48px -8px rgba(189, 196, 221, .35);" alt="Total users line chart">
-                      <img src="assets/img/landing/saas-5/use-cases/data-analysis/line-chart-dark.png" class="d-none d-dark-mode-block position-relative rounded-3" style="top: 27.5%; max-width: 482px; box-shadow: 0px 12px 48px -8px rgba(8, 11, 18, .40);" alt="Total users line chart">
-                    </div>
-                    <div class="parallax-layer" style="padding-left: 45.75%;" data-depth="-0.12">
-                      <img src="assets/img/landing/saas-5/use-cases/data-analysis/bar-chart-light.png" class="d-dark-mode-none position-relative rounded-3" style="max-width: 345px; box-shadow: 0 10.8px 43.2px -7.2px rgba(189, 196, 221, .35);" alt="Traffic bar chart">
-                      <img src="assets/img/landing/saas-5/use-cases/data-analysis/bar-chart-dark.png" class="d-none d-dark-mode-block position-relative rounded-3" style="max-width: 345px; box-shadow: 0px 12px 48px -8px rgba(8, 11, 18, .40);" alt="Traffic bar chart">
-                    </div>
-                    <div class="parallax-layer" style="padding-right: 7.547%; padding-left: 44.97%;" data-depth="0.3">
-                      <img src="assets/img/landing/saas-5/use-cases/data-analysis/donut-chart-light.png" class="d-dark-mode-none position-relative rounded-3" style="top: 60.75%; max-width: 302px; box-shadow: 0px 0px 48px -4px rgba(189, 196, 221, .35);" alt="Traffic donut chart">
-                      <img src="assets/img/landing/saas-5/use-cases/data-analysis/donut-chart-dark.png" class="d-none d-dark-mode-block position-relative rounded-3" style="top: 60.75%; max-width: 302px; box-shadow: 0px -15px 48px -8px rgba(8, 11, 18, .40);" alt="Traffic donut chart">
-                    </div>
+                     <div class="parallax-layer" data-depth="0">
+                        <div class="ratio" style="--si-aspect-ratio: 89.6%"></div>
+                     </div>
+                     <div class="parallax-layer" style="padding-right: 24.2%;" data-depth="0.1">
+                        <img src="assets/img/landing/saas-5/use-cases/data-analysis/line-chart-light.png" class="d-dark-mode-none position-relative rounded-3" style="top: 27.5%; max-width: 482px; box-shadow: 0 12px 48px -8px rgba(189, 196, 221, .35);" alt="Total users line chart">
+                        <img src="assets/img/landing/saas-5/use-cases/data-analysis/line-chart-dark.png" class="d-none d-dark-mode-block position-relative rounded-3" style="top: 27.5%; max-width: 482px; box-shadow: 0px 12px 48px -8px rgba(8, 11, 18, .40);" alt="Total users line chart">
+                     </div>
+                     <div class="parallax-layer" style="padding-left: 45.75%;" data-depth="-0.12">
+                        <img src="assets/img/landing/saas-5/use-cases/data-analysis/bar-chart-light.png" class="d-dark-mode-none position-relative rounded-3" style="max-width: 345px; box-shadow: 0 10.8px 43.2px -7.2px rgba(189, 196, 221, .35);" alt="Traffic bar chart">
+                        <img src="assets/img/landing/saas-5/use-cases/data-analysis/bar-chart-dark.png" class="d-none d-dark-mode-block position-relative rounded-3" style="max-width: 345px; box-shadow: 0px 12px 48px -8px rgba(8, 11, 18, .40);" alt="Traffic bar chart">
+                     </div>
+                     <div class="parallax-layer" style="padding-right: 7.547%; padding-left: 44.97%;" data-depth="0.3">
+                        <img src="assets/img/landing/saas-5/use-cases/data-analysis/donut-chart-light.png" class="d-dark-mode-none position-relative rounded-3" style="top: 60.75%; max-width: 302px; box-shadow: 0px 0px 48px -4px rgba(189, 196, 221, .35);" alt="Traffic donut chart">
+                        <img src="assets/img/landing/saas-5/use-cases/data-analysis/donut-chart-dark.png" class="d-none d-dark-mode-block position-relative rounded-3" style="top: 60.75%; max-width: 302px; box-shadow: 0px -15px 48px -8px rgba(8, 11, 18, .40);" alt="Traffic donut chart">
+                     </div>
                   </div>
-                </div>
-                <div class="col-md-5 col-xl-4 offset-xl-1 order-md-1 text-center text-md-start">
+               </div>
+               <div class="col-md-5 col-xl-4 offset-xl-1 order-md-1 text-center text-md-start">
                   <h3 class="h2 mb-lg-4">Data analysis tools</h3>
                   <p class="fs-lg pb-lg-2 mb-4">From complex analysis to stunning visualizations, our advanced AI technology can help you extract valuable insights and make data-driven decisions faster than ever before.</p>
                   <a href="#" class="btn btn-primary">
-                    Learn more
-                    <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
+                  Learn more
+                  <i class="bx bx-right-arrow-alt fs-xl ms-2 me-n1"></i>
                   </a>
-                </div>
-              </div>
-      </section>
-
-
-      <!-- Use cases (Tabs) -->
-      <section class="container pt-5 pb-2 mt-3 mt-sm-4 mt-xl-5">
-        <h2 class="h1 text-center pb-3 pb-lg-4">One Tool — Endless Use Cases</h2>
-
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs flex-nowrap justify-content-lg-center overflow-auto pb-2 mb-3 mb-lg-4" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link text-nowrap active" id="project-management-tab" data-bs-toggle="tab" data-bs-target="#project-management" type="button" role="tab" aria-controls="project-management" aria-selected="true">
-              <i class="bx bx-star fs-lg opacity-60 me-2"></i>
-              Project Management
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link text-nowrap" id="remote-work-tab" data-bs-toggle="tab" data-bs-target="#remote-work" type="button" role="tab" aria-controls="remote-work" aria-selected="false">
-              <i class="bx bx-briefcase-alt-2 fs-lg opacity-60 me-2"></i>
-              Remote Work
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link text-nowrap" id="product-release-tab" data-bs-toggle="tab" data-bs-target="#product-release" type="button" role="tab" aria-controls="product-release" aria-selected="false">
-              <i class="bx bx-rocket fs-lg opacity-60 me-2"></i>
-              Product Release
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link text-nowrap" id="campaign-planning-tab" data-bs-toggle="tab" data-bs-target="#campaign-planning" type="button" role="tab" aria-controls="campaign-planning" aria-selected="false">
-              <i class="bx bx-bar-chart-alt-2 fs-lg opacity-60 me-2"></i>
-              Campaign Planning
-            </button>
-          </li>
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content bg-secondary rounded-3 py-4">
-
-          <!-- Project Management -->
-          <div class="tab-pane fade show active" id="project-management" role="tabpanel" aria-labelledby="project-management-tab">
-            <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0">
-              <div class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start">
-                <h3 class="mb-lg-4">Project management</h3>
-                <p>Vestibulum nunc lectus auctor quis. Natoque lectus tortor lacus, eu. Nunc feugiat nisl maecenas nulla hac morbi. Vitae, donec facilisis sed nunc netus. Venenatis posuere faucibus enim est. Vel dignissim morbi blandit morbi tellus. Arcu ullamcorper quis enim.</p>
-              </div>
-              <div class="col-lg-6 col-md-7 mt-md-4">
-                <img src="assets/img/landing/saas-1/use-cases/01.png" class="d-block my-lg-2 mx-auto me-md-0" width="595" alt="Image">
-              </div>
+               </div>
             </div>
-          </div>
-
-          <!-- Remote Work -->
-          <div class="tab-pane fade" id="remote-work" role="tabpanel" aria-labelledby="remote-work-tab">
-            <div class="row align-items-center pt-3 pb-2 pb-sm-3 pt-sm-4 pt-md-0 px-3 px-sm-4 px-lg-0">
-              <div class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start">
-                <h3 class="mb-lg-4">Remote work</h3>
-                <p>Ut ornare quisque blandit condimentum nec viverra habitant non. Consequat id leo bibendum enim, fringilla pulvinar volutpat fames. Ut fames ut sed lobortis nulla. In dui enim et pharetra gravida diam semper lectus tellus. Faucibus mi convallis.</p>
-              </div>
-              <div class="col-lg-6 col-md-7 mt-md-4">
-                <img src="assets/img/landing/saas-1/use-cases/02.png" class="d-block my-lg-2 mx-auto me-md-0" width="502" alt="Image">
-              </div>
+         </section>
+         <!-- Map -->
+         <section class="bg-dark py-5" data-bs-theme="dark">
+            <div class="container pt-2 py-sm-3 py-md-4 py-lg-5 my-xxl-3">
+               <div class="row pt-lg-2 pt-xl-3">
+                  <div class="col-md-6">
+                     <h2 class="h1 pe-xxl-5 me-xl-4 mb-md-0">Reach your <span class="text-warning">segmented customers</span> all over the world. Get access to the API from anywhere.</h2>
+                  </div>
+                  <div class="col-md-6 col-xl-5 offset-xl-1">
+                     <p class="text-body fs-xl mb-0">Our platform allows you to connect with your segmented customers no matter where they are located. With our highly distributed and resilient infrastructure, you can engage with your target audience, delivering tailored experiences to meet their unique needs.</p>
+                  </div>
+               </div>
+               <div class="pt-5 mt-sm-2 mt-md-3 mt-lg-4 mt-xl-5">
+                  <img src="assets/img/landing/saas-5/map.png" alt="Map">
+               </div>
             </div>
-          </div>
-
-          <!-- Product Release -->
-          <div class="tab-pane fade" id="product-release" role="tabpanel" aria-labelledby="product-release-tab">
-            <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 pe-sm-4 pe-md-0 ps-sm-4 ps-lg-0">
-              <div class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start">
-                <h3 class="mb-lg-4">Product release</h3>
-                <p>Fames netus pretium massa lobortis sit metus et. Sit risus odio fermentum hac fames enim, ac, in. Neque lacus, consequat hendrerit potenti in tristique dictum. Tortor nec lorem et venenatis facilisis risus viverra nunc, eu. Eget suscipit vel amet.</p>
-              </div>
-              <div class="col-lg-6 col-md-7 mt-n3 mt-md-1">
-                <img src="assets/img/landing/saas-1/use-cases/03.png" class="d-block mb-lg-2 mx-auto me-md-0" width="525" alt="Image">
-              </div>
+         </section>
+         <!-- Sign up CTA -->
+         <section id="contact_now" class="container">
+            <div class="position-relative bg-dark rounded-3 overflow-hidden py-5 px-4 px-sm-0">
+               <span class="position-absolute top-0 start-0 d-block w-100 h-100" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);"></span>
+               <div class="position-relative row justify-content-center py-sm-2 py-lg-5">
+                  <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
+                     <h2 class="h1 text-light mb-4">Ready to Get Started?</h2>
+                     <p class="fs-lg text-light opacity-70 pb-4 mb-3">Write your email address so we can contact you</p>
+                     <!-- Desktop form -->
+                     <form class="input-group input-group-lg d-none d-sm-flex subscription-form validate mb-3" action="https://sociokraft.us12.list-manage.com/subscribe/post?u=80a707b9b9b7b3a594a5eb5b0&amp;id=0759912701&amp;f_id=0066bce0f0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                        <div class="input-group">
+                           <input type="email" id="subscr-email" class="form-control rounded-start ps-5" name="EMAIL" placeholder="Your email" required>
+                           <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                           <button type="submit" class="btn btn-primary" name="subscribe">Get in touch</button>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                           <input class="subscription-form-antispam" type="text" name="mailchimp-embedded-form-antispam-name-attribute" tabindex="-1">
+                        </div>
+                        <div class="subscription-status"></div>
+                     </form>
+                     <!-- Mobile form -->
+                     <form class="needs-validation d-sm-none subscription-form validate mb-3" action="https://sociokraft.us12.list-manage.com/subscribe/post?u=80a707b9b9b7b3a594a5eb5b0&amp;id=0759912701&amp;f_id=0066bce0f0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+                        <div class="position-relative mb-3">
+                           <input type="email" id="subscr-email" class="form-control rounded-start ps-5" name="EMAIL" placeholder="Your email" required>
+                           <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                           <button type="submit" class="btn btn-primary btn-lg w-100" name="subscribe">Get in touch</button>
+                        </div>
+                        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                           <input class="subscription-form-antispam" type="text" name="mailchimp-embedded-form-antispam-name-attribute" tabindex="-1">
+                        </div>
+                        <div class="subscription-status"></div>
+                     </form>
+                     <p class="fs-sm text-light opacity-50 mb-0">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</p>
+                  </div>
+               </div>
             </div>
-          </div>
-
-          <!-- Campaign Planning -->
-          <div class="tab-pane fade" id="campaign-planning" role="tabpanel" aria-labelledby="campaign-planning-tab">
-            <div class="row align-items-center pt-3 pt-sm-4 pt-md-0 px-3 pe-sm-4 pe-md-0 ps-sm-4 ps-lg-0">
-              <div class="col-lg-4 col-md-5 offset-lg-1 text-center text-md-start">
-                <h3 class="mb-lg-4">Campaign planning</h3>
-                <p>Diam bibendum scelerisque vel mauris magna. Iaculis interdum tincidunt eget nibh purus. Aliquet at sit morbi nisi volutpat fermentum scelerisque. Enim tincidunt eros sodales integer sapien. Eu ullamcorper egestas odio nunc faucibus. Sapien eu nunc sed facilisi luctus ac.</p>
-              </div>
-              <div class="col-lg-6 col-md-7 mt-n3 mt-md-1">
-                <img src="assets/img/landing/saas-1/use-cases/04.png" class="d-block mb-lg-2 mx-auto me-md-0" width="545" alt="Image">
-              </div>
+         </section>
+      </main>
+      <!-- Footer -->
+      <footer class="footer pt-5 pb-4 pb-lg-5">
+         <div class="container pt-lg-4">
+            <div class="row pb-5">
+               <div class="col-lg-4 col-md-6">
+                  <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                     <img src="assets/img/logo.png" width="47" alt="Sociokraft">
+                     Sociokraft
+                  </div>
+                  <p class="fs-sm pb-lg-3 mb-4">Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.</p>
+               </div>
+               <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+                  <div id="footer-links" class="row">
+                     <div class="col-lg-4">
+                        <h6 class="mb-2">
+                           <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
+                        </h6>
+                        <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                           <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                              <li class="nav-item"><a href="index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                              <li class="nav-item"><a href="bal.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Bal by Sociokraft</a></li>
+                              <li class="nav-item"><a href="hive.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Hive by Sociokraft</a></li>
+                              <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a></li>
+                              <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Pricing</a></li>
+                              <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">FAQ</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-lg-3">
+                        <h6 class="mb-2">
+                           <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
+                        </h6>
+                        <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                           <ul class="nav flex-column mb-2 mb-lg-0">
+                              <li class="nav-item"><a href="https://www.linkedin.com/company/sociokraft" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                              <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
+                              <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
+                           </ul>
+                           <ul class="nav flex-column mb-2 mb-lg-0">
+                              <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
+                              <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                        <h6 class="mb-2">Contact Us</h6>
+                        <a href="mailto:hello@sociokraft.com" class="fw-medium">hello@sociokraft.com</a>
+                     </div>
+                  </div>
+               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-      <!-- Map -->
-      <section class="bg-dark py-5" data-bs-theme="dark">
-        <div class="container pt-2 py-sm-3 py-md-4 py-lg-5 my-xxl-3">
-          <div class="row pt-lg-2 pt-xl-3">
-            <div class="col-md-6">
-              <h2 class="h1 pe-xxl-5 me-xl-4 mb-md-0">Reach your <span class="text-warning">segmented customers</span> all over the world. Get access to the API from anywhere.</h2>
-            </div>
-            <div class="col-md-6 col-xl-5 offset-xl-1">
-              <p class="text-body fs-xl mb-0">Our platform allows you to connect with your segmented customers no matter where they are located. With our highly distributed and resilient infrastructure, you can engage with your target audience, delivering tailored experiences to meet their unique needs.</p>
-            </div>
-          </div>
-          <div class="pt-5 mt-sm-2 mt-md-3 mt-lg-4 mt-xl-5">
-            <img src="assets/img/landing/saas-5/map.png" alt="Map">
-          </div>
-        </div>
-      </section>
-
-
-
-
-      <!-- Sign up CTA -->
-      <section id="contact_now" class="container">
-        <div class="position-relative bg-dark rounded-3 overflow-hidden py-5 px-4 px-sm-0">
-          <span class="position-absolute top-0 start-0 d-block w-100 h-100" style="background: radial-gradient(116.18% 118% at 50% 100%, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);"></span>
-          <div class="position-relative row justify-content-center py-sm-2 py-lg-5">
-            <div class="col-xl-6 col-lg-7 col-md-8 col-sm-10 text-center">
-              <h2 class="h1 text-light mb-4">Ready to Get Started?</h2>
-              <p class="fs-lg text-light opacity-70 pb-4 mb-3">Write your email address so we can contact you</p>
-
-              <!-- Desktop form -->
-              <form class="input-group input-group-lg d-none d-sm-flex subscription-form validate mb-3" action="https://sociokraft.us12.list-manage.com/subscribe/post?u=80a707b9b9b7b3a594a5eb5b0&amp;id=0759912701&amp;f_id=0066bce0f0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                <div class="input-group">
-                  <input type="email" id="subscr-email" class="form-control rounded-start ps-5" name="EMAIL" placeholder="Your email" required>
-                  <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-
-                  <button type="submit" class="btn btn-primary" name="subscribe">Get in touch</button>
-                </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input class="subscription-form-antispam" type="text" name="mailchimp-embedded-form-antispam-name-attribute" tabindex="-1">
-                </div>
-                <div class="subscription-status"></div>
-              </form>
-
-              <!-- Mobile form -->
-              <form class="needs-validation d-sm-none subscription-form validate mb-3" action="https://sociokraft.us12.list-manage.com/subscribe/post?u=80a707b9b9b7b3a594a5eb5b0&amp;id=0759912701&amp;f_id=0066bce0f0" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate>
-                <div class="position-relative mb-3">
-                  <input type="email" id="subscr-email" class="form-control rounded-start ps-5" name="EMAIL" placeholder="Your email" required>
-                  <i class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
-                  <button type="submit" class="btn btn-primary btn-lg w-100" name="subscribe">Get in touch</button>
-                </div>
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
-                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                  <input class="subscription-form-antispam" type="text" name="mailchimp-embedded-form-antispam-name-attribute" tabindex="-1">
-                </div>
-                <div class="subscription-status"></div>
-              </form>
-              <p class="fs-sm text-light opacity-50 mb-0">*Subscribe to our newsletter to receive early discount offers, updates and new products info.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-
-    <!-- Footer -->
-    <footer class="footer pt-5 pb-4 pb-lg-5">
-      <div class="container pt-lg-4">
-        <div class="row pb-5">
-          <div class="col-lg-4 col-md-6">
-            <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.png" width="47" alt="Sociokraft">
-              Sociokraft
-            </div>
-            <p class="fs-sm pb-lg-3 mb-4">Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.</p>
-          </div>
-          <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
-            <div id="footer-links" class="row">
-              <div class="col-lg-4">
-                <h6 class="mb-2">
-                  <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Useful Links</a>
-                </h6>
-                <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
-                  <ul class="nav flex-column pb-lg-1 mb-lg-3">
-                    <li class="nav-item"><a href="index.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
-                    <li class="nav-item"><a href="bal.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Bal by Sociokraft</a></li>
-                    <li class="nav-item"><a href="hive.html" class="nav-link d-inline-block px-0 pt-1 pb-2">Hive by Sociokraft</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Contact</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Pricing</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">FAQ</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-3">
-                <h6 class="mb-2">
-                  <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2" data-bs-toggle="collapse">Socials</a>
-                </h6>
-                <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
-                  <ul class="nav flex-column mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="https://www.linkedin.com/company/sociokraft" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
-                  </ul>
-
-                  <ul class="nav flex-column mb-2 mb-lg-0">
-                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp; Conditions</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
-                <h6 class="mb-2">Contact Us</h6>
-                <a href="mailto:hello@sociokraft.com" class="fw-medium">hello@sociokraft.com</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
-          &copy; All rights reserved. Made by 
-          <a class="nav-link d-inline-block p-0" href="https://sociokraft.com" target="_blank" rel="noopener">Sociokraft</a>
-        </p>
-      </div>
-    </footer>
-
-
-    <!-- Back to top button -->
-    <a href="#top" class="btn-scroll-top" data-scroll>
+            <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+               &copy; All rights reserved. Made by 
+               <a class="nav-link d-inline-block p-0" href="https://sociokraft.com" target="_blank" rel="noopener">Sociokraft</a>
+            </p>
+         </div>
+      </footer>
+      <!-- Back to top button -->
+      <a href="#top" class="btn-scroll-top" data-scroll>
       <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
-    </a>
-
-
-    <!-- Vendor Scripts -->
-    <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
-    <script src="assets/vendor/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
-    <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
-    <script src="assets/vendor/rellax/rellax.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main Theme Script -->
-    <script src="assets/js/theme.min.js"></script>
-  </body>
+      </a>
+      <!-- Vendor Scripts -->
+      <script src="assets/vendor/parallax-js/dist/parallax.min.js"></script>
+      <script src="assets/vendor/vanilla-tilt/dist/vanilla-tilt.min.js"></script>
+      <script src="assets/vendor/jarallax/dist/jarallax.min.js"></script>
+      <script src="assets/vendor/rellax/rellax.min.js"></script>
+      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+      <!-- Main Theme Script -->
+      <script src="assets/js/theme.min.js"></script>
+   </body>
 </html>
